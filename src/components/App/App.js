@@ -6,9 +6,13 @@ import { Route, NavLink } from 'react-router-dom'
 import './App.css';
 
 export class App extends Component {
-  construtor() {
+  constructor () {
     super()
+    this.state = {
+      
+    }
   }
+
 
   componentDidMount() {
   }
