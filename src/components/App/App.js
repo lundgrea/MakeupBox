@@ -13,7 +13,8 @@ export class App extends Component {
   constructor () {
     super()
     this.state = {
-      makeup: []
+      makeup: [],
+      isLoading: true
     }
   }
 
@@ -23,7 +24,8 @@ export class App extends Component {
     try {
       const allMakeup = await fetchAllMakeup();
       this.props.isLoading(false)
-      this.setState({makeup: allMakeup})
+      this.setState({makeup: allMakeup, isLoading: false})
+
     } catch ({message}) {
       this.props.handleErrors(message)
       this.props.isLoading(false)
@@ -36,7 +38,7 @@ export class App extends Component {
       <main className="main">
         <h1>MAKEUP BOX</h1>
         {this.props.error && <p className="error">{this.props.error}</p>}
-        {!!this.props.isLoading && <p className="loading">Page Is Loading</p>}
+        {this.state.isLoading && <p className="loading">Page Is Loading</p>}
       </main>
     )
   }
