@@ -3,3 +3,7 @@ export const handleErrors = error => ({
   error
 })
 
+export const isLoading = bool => ({
+  type: 'IS_LOADING',
+  bool
+})
