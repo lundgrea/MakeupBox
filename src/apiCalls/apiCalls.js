@@ -7,3 +7,9 @@ export const fetchAllMakeup = async () => {
   const allMakeup = await response.json();
   return allMakeup
 }
+
+// export const fetchQuestionOne = async (answer1) => {
+//   const url = ``;
+//   const response = await fetch(url)
+// }
+
