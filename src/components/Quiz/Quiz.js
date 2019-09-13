@@ -51,6 +51,7 @@ export class Quiz extends Component {
     return (
       <fieldset>
         {this.generateQuiz()}
+        <button>sumbmit answers</button>
       </fieldset>
     )
 }
