@@ -3,9 +3,9 @@ import './App.css'
 import { fetchAllMakeup } from '../../apiCalls/apiCalls'
 import { connect } from 'react-redux'
 import { isLoading, handleErrors } from "../../actions";
+import { Route, NavLink } from 'react-router-dom'
 
 import PropTypes from 'prop-types'
-import { Route, NavLink } from 'react-router-dom'
 
 import './App.css';
 
@@ -18,8 +18,6 @@ export class App extends Component {
     }
   }
 
-  
-  
   componentDidMount = async () => {
     try {
       const allMakeup = await fetchAllMakeup();
@@ -36,9 +34,21 @@ export class App extends Component {
     console.log(this.props)
     return (
       <main className="main">
-        <h1>MAKEUP BOX</h1>
-        {this.props.error && <p className="error">{this.props.error}</p>}
-        {this.state.isLoading && <p className="loading">Page Is Loading</p>}
+        <nav>
+          <h1>MAKEUP BOX</h1>
+          <NavLink to='/' className='nav'> Home </NavLink>
+          <NavLink to='/brands' className='nav'> Brands </NavLink>
+          <NavLink to='/makeup' className='nav'> Makeup </NavLink>
+          <NavLink to='/tags' className='nav'> Tags </NavLink>
+          <NavLink to='/inspiration' className='nav'> Inspiration </NavLink>
+        </nav>
+        <section>
+          {this.props.error && <p className="error">{this.props.error}</p>}
+          {this.state.isLoading && <p className="loading">Page Is Loading</p>}
+        </section>
+        <section>
+          
+        </section>
       </main>
     )
   }
