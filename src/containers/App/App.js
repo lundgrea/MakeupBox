@@ -42,7 +42,6 @@ export class App extends Component {
           <NavLink to='/brands' className='nav'> Brands </NavLink>
           <NavLink to='/makeup' className='nav'> Makeup </NavLink>
           <NavLink to='/tags' className='nav'> Tags </NavLink>
-          <NavLink to='/inspiration' className='nav'> Inspiration </NavLink>
         </nav>
         <section>
           {this.props.error && <p className="error">{this.props.error}</p>}
@@ -50,10 +49,9 @@ export class App extends Component {
         </section>
         <section>
           <Route exact path='/' component={Home} />
-          <Route path='/brands' render={() => <SelectorPage data={brandData} />} />
-          
-
-
+          <Route path='/brands' component={SelectorPage} />
+          <Route path='/makeup' component={SelectorPage} />
+          <Route path='/tags' component={SelectorPage} />
         </section>
       </main>
     )
