@@ -1,13 +1,34 @@
-import React from 'react';
-import './SelectorPage.css';
+// import React, { Component }  from 'react';
+// import './MainContainer.css';
+// import QuizPage from '../Quiz/Quiz'
 
-const SelectorPage = () => {
-  
-  return (
-    
-    <h2>SELECTOR PAGE</h2>
-  )
-  
-}
+// export class MainContainer extends Component {
+//   constructor() {
+//     super();
+//     this.state = {
+      
+//     }
+//   }
 
-export default SelectorPage;
+//   quizQuestion = () => {
+//     return this.state.quizQuestions.map(question => {
+//       return (
+//         <div>
+//           <QuizPage   
+//             question={question.question[0]}
+//             answers={question.answers[0]}
+//         />
+//     </div>
+//       )
+//     })
+//   }
+
+//   render() {
+//     return (
+//       <>{this.quizQuestion}</>
+//     )
+//   }
+// }
+
+// export default MainContainer;
+
