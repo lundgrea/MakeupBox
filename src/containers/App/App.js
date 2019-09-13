@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import './App.css'
-import { fetchAllMakeup } from '../../apiCalls/apiCalls'
-import { connect } from 'react-redux'
+import './App.css';
+import { fetchAllMakeup } from '../../apiCalls/apiCalls';
+import { connect } from 'react-redux';
 import { isLoading, handleErrors } from "../../actions";
-import { Route, NavLink } from 'react-router-dom'
+import Home from '../../components/Home/Home';
+import SelectorPage from '../../components/SelectorPage/SelectorPage';
+import { Route, NavLink } from 'react-router-dom';
 
 import PropTypes from 'prop-types'
 
@@ -47,7 +49,11 @@ export class App extends Component {
           {this.state.isLoading && <p className="loading">Page Is Loading</p>}
         </section>
         <section>
+          <Route exact path='/' component={Home} />
+          <Route path='/brands' render={() => <SelectorPage data={brandData} />} />
           
+
+
         </section>
       </main>
     )
