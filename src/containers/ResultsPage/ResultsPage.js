@@ -7,19 +7,28 @@ import { fetchMakeup } from '../../apiCalls/apiCalls';
 import { CardContainer } from '../../components/CardContainer/CardContainer'
 
 export class ResultsPage extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isLoading: false
+    }
+  }
  
   async componentDidMount () {
     const searches = cleanedSearch(this.props.responses)
     try {
       this.props.isLoading(true)
+      this.setState({isLoading: true})
       const firstResult = await fetchMakeup(searches[0])
       const secondResult = await fetchMakeup(searches[1])
       const thirdResult = await fetchMakeup(searches[2])
       this.props.getResults([firstResult, secondResult, thirdResult])
       this.props.isLoading(false);
+      this.setState({isLoading: false})
     } catch ({message}) {
       this.props.handleErrors(message)
       this.props.isLoading(false)
+      this.setState({isLoading: false})
     }
   }
 
@@ -28,7 +37,7 @@ export class ResultsPage extends Component {
     return (
       <section>
         {this.props.error && <p className="error">{this.props.error}</p>}
-        {this.props.isLoading && <p className="loading">Page Is Loading</p>}
+        {this.state.isLoading && <p className="loading">Page Is Loading</p>}
         <h3>results</h3>
         {!this.isLoading && <CardContainer results={this.props.results}/>}
     </section>

@@ -1,3 +1,6 @@
+export const cleanedSearchResults = () => {
+}
+
 export const cleanedSearch = (responses) => {
   let search = responses.map(response => {
     if (response === 'lips') {
@@ -39,3 +42,5 @@ export const cleanedSearch = (responses) => {
   })
   return search
 }
+
+
