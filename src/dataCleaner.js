@@ -3,7 +3,7 @@ export const cleanedSearchResults = (productList) => {
     return {
       id: item.id,
       brand: item.brand,
-      category: item.category,
+      type: item.product_type,
       description: item.description,
       img: item.image_link,
       name: item.name,

@@ -43,7 +43,7 @@ export class ResultsPage extends Component {
       <section>
         {this.state.isLoading && <p className="loading">Page Is Loading</p>}
         <h3>results</h3>
-        {!this.state.isLoading && <CardContainer data={this.props.results}/>}
+        {!this.state.isLoading && <CardContainer category={this.props.responses} data={this.props.results}/>}
     </section>
     )
   }
