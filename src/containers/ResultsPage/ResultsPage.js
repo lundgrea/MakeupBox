@@ -41,8 +41,8 @@ export class ResultsPage extends Component {
   render() {
     return (
       <section className="results-page">
-        {this.state.isLoading && <p className="loading">Page Is Loading</p>}
-        <h3>results</h3>
+        <h3 className="results-page-headline">Your Results</h3>
+        {this.state.isLoading && <p className="loading">Gathering Your Selects</p>}
         {!this.state.isLoading && <CardContainer category={this.props.responses} data={this.props.results}/>}
     </section>
     )
