@@ -8,7 +8,7 @@ export const WelcomePage = () => {
       <h2>Welcome to makeupBOX</h2>
       <h3>no experience required</h3>
       <p>First, help us get to know you.</p>
-      <Link to='/quiz' className='button-start-quiz'>START QUIZ</Link>
+      <Link to='/quiz' className='button-start-quiz'><button>START QUIZ</button></Link>
     </section>
   )
 }

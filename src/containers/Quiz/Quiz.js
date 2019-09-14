@@ -57,7 +57,7 @@ export class Quiz extends Component {
     return (
       <fieldset>
         {this.generateQuiz()}
-        <Link to='/results'>submit answers</Link>
+        <Link to='/results'><button>submit answers</button></Link>
       </fieldset>
     )
   }
