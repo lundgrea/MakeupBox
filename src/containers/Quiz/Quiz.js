@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import './Quiz.css';
 import QuizQuestion from '../../components/QuizQuestion/QuizQuestion';
-import { getResults, setResponses } from "../../actions";
+import { setResponses } from "../../actions";
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom'
 
 export class Quiz extends Component {
   constructor() {
     super()
     this.state = {
-      userAnswers: [],      
+      userAnswers: [],     
+      results: [], 
       quizQuestions: [
         {
           question: 'What is your primary interest?', 
@@ -18,7 +20,7 @@ export class Quiz extends Component {
         },
         {
           question: 'What style speaks most to you?', 
-          answers: ['bronzed','bold', 'natural', 'smoky'],
+          answers: ['bronzed','bold', 'natural', 'smokey'],
           id: 2,
           name: 'style'
         },
@@ -41,20 +43,9 @@ export class Quiz extends Component {
   generateQuiz = () => {
     return this.state.quizQuestions.map(question => {
       return (
-        <form>
-          <QuizQuestion question={question.question} answers={question.answers} key={question.id} name={question.name} handleChange={this.handleChange}/>
-        </form>
+        <QuizQuestion question={question.question} answers={question.answers} key={question.id} name={question.name} handleChange={this.handleChange}/>
       )
     })    
-  }
-
-  fetchMakeup = async e => {
-    e.preventDefault();
-    try {
-
-    } catch {
-
-    }
   }
 
   handleChange = (e) => {
@@ -62,12 +53,11 @@ export class Quiz extends Component {
     this.props.setResponses(e.target.value)
   }
 
-  
   render() {
     return (
       <fieldset>
         {this.generateQuiz()}
-        <button className="button-submit-quiz" onClick={this.fetchMakeup}>submit answers</button>
+        <Link to='/results'>submit answers</Link>
       </fieldset>
     )
   }
@@ -75,7 +65,6 @@ export class Quiz extends Component {
 
 
 export const mapDispatchToProps = dispatch => ({
-  getResults: results => dispatch(getResults(results)),
   setResponses: response => dispatch(setResponses(response))
 });
 
