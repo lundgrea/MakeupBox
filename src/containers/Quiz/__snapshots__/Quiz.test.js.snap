@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Quiz should match the snapshot 1`] = `
+<fieldset>
+  <QuizQuestion
+    answers={
+      Array [
+        "lips",
+        "eyes",
+        "face/body",
+        "nails",
+      ]
+    }
+    handleChange={[Function]}
+    key="1"
+    name="interest"
+    question="What is your primary interest?"
+  />
+  <QuizQuestion
+    answers={
+      Array [
+        "bronzed",
+        "bold",
+        "natural",
+        "smokey",
+      ]
+    }
+    handleChange={[Function]}
+    key="2"
+    name="style"
+    question="What style speaks most to you?"
+  />
+  <QuizQuestion
+    answers={
+      Array [
+        "cruelty free",
+        "organic",
+        "non-gmo",
+        "vegan",
+      ]
+    }
+    handleChange={[Function]}
+    key="3"
+    name="causes"
+    question="What are your causes?"
+  />
+  <QuizQuestion
+    answers={
+      Array [
+        "none",
+        "some",
+        "a bit",
+        "absolute master",
+      ]
+    }
+    handleChange={[Function]}
+    key="4"
+    name="experience"
+    question="What is your previous experience using makeup"
+  />
+  <Link
+    to="/results"
+  >
+    submit answers
+  </Link>
+</fieldset>
+`;
