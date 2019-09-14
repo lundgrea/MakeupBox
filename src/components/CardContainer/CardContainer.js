@@ -11,7 +11,7 @@ export const CardContainer = ({category, data}) => {
  
   const firstCards = firstAnswerResults.map(result => {
     return (
-        <div>
+        <div key={result.id}>
           <Cards 
           {...result}
           key={result.id}
@@ -22,7 +22,7 @@ export const CardContainer = ({category, data}) => {
 
   const secondCards = secondAnswerResults.map(result => {
     return (
-        <div>
+        <div key={result.id}>
           <Cards 
           {...result}
           key={result.id}
@@ -33,7 +33,7 @@ export const CardContainer = ({category, data}) => {
 
   const thirdCards = thirdAnswerResults.map(result => {
     return (
-        <div>
+        <div key={result.id}>
           <Cards 
           {...result}
           key={result.id}
