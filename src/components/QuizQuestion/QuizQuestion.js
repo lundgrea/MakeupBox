@@ -4,15 +4,15 @@ import './QuizQuestion.css'
 export const QuizQuestion = ({answers, question, key, name, handleChange}) => {
 
   const buildAnswers = () => {
-    let answersList = answers.map(answer => {
+    let answersList = answers.map((answer, index) => {
     return (
-      <div>
+      <div key={key + `${index}`}>
         <input
           type="radio"
           name={name}
           value={answer}
-          onChange={handleChange}
           key={key}
+          onChange={handleChange}
         ></input>
         <label htmlFor={answer}>{answer}</label>
       </div>
