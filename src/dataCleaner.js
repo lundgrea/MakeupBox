@@ -1,4 +1,19 @@
-export const cleanedSearchResults = () => {
+export const cleanedSearchResults = (productList) => {
+  const cleanedData = productList.map(item => {
+    return {
+      id: item.id,
+      brand: item.brand,
+      category: item.category,
+      description: item.description,
+      img: item.image_link,
+      name: item.name,
+      price: item.price,
+      tags: item.tag_list,
+      color: item.product_colors
+    }
+  })
+  console.log(cleanedData)
+  return cleanedData
 }
 
 export const cleanedSearch = (responses) => {

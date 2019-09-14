@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './ResultsPage.css';
-import { cleanedSearch } from '../../dataCleaner'
+import { cleanedSearch, cleanedSearchResults } from '../../dataCleaner'
 import { connect } from 'react-redux';
 import { getResults, setResponses, isLoading, handleErrors } from "../../actions";
 import { fetchMakeup } from '../../apiCalls/apiCalls';
@@ -20,9 +20,12 @@ export class ResultsPage extends Component {
       this.props.isLoading(true)
       this.setState({isLoading: true})
       const firstResult = await fetchMakeup(searches[0])
+      const cleanedFirstData = await cleanedSearchResults(firstResult)
       const secondResult = await fetchMakeup(searches[1])
+      const cleanedSecondData = await cleanedSearchResults(secondResult)
       const thirdResult = await fetchMakeup(searches[2])
-      this.props.getResults([firstResult, secondResult, thirdResult])
+      const cleanedThirdData = await cleanedSearchResults(thirdResult)
+      this.props.getResults([cleanedFirstData, cleanedSecondData, cleanedThirdData])
       this.props.isLoading(false);
       this.setState({isLoading: false})
     } catch ({message}) {
@@ -33,7 +36,6 @@ export class ResultsPage extends Component {
   }
 
   render() {
-    console.log('this.props.results', this.props.results)
     return (
       <section>
         {this.props.error && <p className="error">{this.props.error}</p>}
