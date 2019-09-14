@@ -1,0 +1,22 @@
+img {
+  height: 150px;
+}
+
+.card {
+  border: 2px solid black;
+  border-radius: 5px;
+  min-width: 30vw;  
+  margin: 10px 2px 0px 2px;
+  padding: 10px;
+  text-align: center;
+  background: white;
+    color: black;
+
+}
+
+.card-description {
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}

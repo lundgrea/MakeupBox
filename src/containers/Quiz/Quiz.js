@@ -63,7 +63,6 @@ export class Quiz extends Component {
   }
 }
 
-
 export const mapDispatchToProps = dispatch => ({
   setResponses: response => dispatch(setResponses(response))
 });

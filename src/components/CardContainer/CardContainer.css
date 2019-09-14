@@ -1,0 +1,16 @@
+.card-container{
+  display: flex;
+}
+
+.results-category-headline{
+  text-align: center;
+}
+
+.results-category-box {
+  border: 2px solid black;
+  border-radius: 2px;
+  padding: 10px;
+  margin: 10px;
+  background: black;
+  color: white;
+}

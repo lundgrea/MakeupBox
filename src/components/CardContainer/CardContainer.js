@@ -1,32 +1,62 @@
 import React from 'react';
 import './CardContainer.css';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
+import Cards from '../Cards/Cards'
 
-export const CardContainer = (props) => {
-  console.log(props)
+export const CardContainer = ({category, data}) => {
 
-  // const answerOneCards = () => {
-  // }
-  // const answerTwoCards = () => { 
+  const firstAnswerResults = data[0].slice(0,5)
+  const secondAnswerResults = data[1].slice(0,5)
+  const thirdAnswerResults = data[2].slice(0,5)
+ 
+  const firstCards = firstAnswerResults.map(result => {
+    return (
+        <div>
+          <Cards 
+          {...result}
+          key={result.id}
+          />
+        </div>
+      )
+  })
 
-  // }
-  // const cards = props.map(result => {
-  //   console.log(result)
-  //   return result
-  // })
-  // console.log(cards)
-  // const cards = () => {
-  //   return props.results.map(result => {
-  //   <Card
+  const secondCards = secondAnswerResults.map(result => {
+    return (
+        <div>
+          <Cards 
+          {...result}
+          key={result.id}
+          />
+        </div>
+      )
+  })
 
-  //   >
-  //   </Card>
-  // })
+  const thirdCards = thirdAnswerResults.map(result => {
+    return (
+        <div>
+          <Cards 
+          {...result}
+          key={result.id}
+          />
+        </div>
+      )
+  })
+    
   return (
-    <>
-    <h2>hi!</h2>
-    {/* {cards} */}
-    </>
+    <article className="card-container">
+      <section className="results-category-box">
+        <h2 className="results-category-headline">{category[0]}</h2>
+        {firstCards}
+      </section>
+      <section className="results-category-box">
+        <h2 className="results-category-headline">{category[1]}</h2>
+        {secondCards}
+      </section>
+      <section className="results-category-box">
+        <h2 className="results-category-headline">{category[2]}</h2>
+        {thirdCards}
+      </section>
+    </article>
   )
 }
 

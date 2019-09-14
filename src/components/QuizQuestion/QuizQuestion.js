@@ -6,12 +6,13 @@ export const QuizQuestion = ({answers, question, key, name, handleChange}) => {
   const buildAnswers = () => {
     let answersList = answers.map(answer => {
     return (
-      <div key={key}>
+      <div>
         <input
           type="radio"
           name={name}
           value={answer}
           onChange={handleChange}
+          key={key}
         ></input>
         <label htmlFor={answer}>{answer}</label>
       </div>

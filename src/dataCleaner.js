@@ -1,3 +1,20 @@
+export const cleanedSearchResults = (productList) => {
+  const cleanedData = productList.map(item => {
+    return {
+      id: item.id,
+      brand: item.brand,
+      type: item.product_type,
+      description: item.description,
+      img: item.image_link,
+      name: item.name,
+      price: item.price,
+      tags: item.tag_list,
+      color: item.product_colors
+    }
+  })
+  return cleanedData
+}
+
 export const cleanedSearch = (responses) => {
   let search = responses.map(response => {
     if (response === 'lips') {
@@ -39,3 +56,5 @@ export const cleanedSearch = (responses) => {
   })
   return search
 }
+
+
