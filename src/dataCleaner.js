@@ -12,7 +12,6 @@ export const cleanedSearchResults = (productList) => {
       color: item.product_colors
     }
   })
-  console.log(cleanedData)
   return cleanedData
 }
 

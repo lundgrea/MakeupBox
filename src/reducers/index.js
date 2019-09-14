@@ -7,9 +7,7 @@ import { responseReducer } from './responses';
 const rootReducer = combineReducers({
   hasErrored: errorsReducer,
   isLoading: loadingReducer,
-  results1: resultsReducer,
-  results2: resultsReducer,
-  results3: resultsReducer,
+  results: resultsReducer,
   responses: responseReducer
 });
 

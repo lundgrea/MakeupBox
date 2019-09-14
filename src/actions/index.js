@@ -8,20 +8,28 @@ export const isLoading = bool => ({
   bool
 })
 
-export const getResultsOne = results => ({
-  type: 'GET_RESULTS_1',
+export const getResults = (results) => ({
+  type: 'GET_RESULTS',
   results
 })
 
-export const getResultsTwo = results => ({
-  type: 'GET_RESULTS_2',
-  results
-})
+// export const getResultsOne = (results, num) => ({
+//   type: 'GET_RESULTS_1',
+//   results,
+//   num
+// })
 
-export const getResultsThree = results => ({
-  type: 'GET_RESULTS_3',
-  results
-})
+// export const getResultsTwo = (results, num) => ({
+//   type: 'GET_RESULTS_2',
+//   results,
+//   num
+// })
+
+// export const getResultsThree = (results, num) => ({
+//   type: 'GET_RESULTS_3',
+//   results,
+//   num
+// })
 
 export const setResponses = response => ({
   type: 'SET_RESPONSES',
