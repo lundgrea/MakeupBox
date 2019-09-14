@@ -2,7 +2,6 @@ import React from 'react';
 import './QuizQuestion.css'
 
 export const QuizQuestion = ({answers, question, id, name, handleChange}) => {
-  console.log(id)
   const buildAnswers = () => {
     let answersList = answers.map((answer, index) => {
     return (

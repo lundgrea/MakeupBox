@@ -5,7 +5,9 @@ exports[`QuizQuestion should match the snapshot with all data passed in correctl
   <h2>
     What is your primary interest?
   </h2>
-  <div>
+  <div
+    key="undefined0"
+  >
     <input
       name="interests"
       onChange={[MockFunction]}
@@ -18,7 +20,9 @@ exports[`QuizQuestion should match the snapshot with all data passed in correctl
       lips
     </label>
   </div>
-  <div>
+  <div
+    key="undefined1"
+  >
     <input
       name="interests"
       onChange={[MockFunction]}

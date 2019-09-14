@@ -15,7 +15,9 @@ exports[`WelcomePage should match the snapshot 1`] = `
     className="button-start-quiz"
     to="/quiz"
   >
-    START QUIZ
+    <button>
+      START QUIZ
+    </button>
   </Link>
 </section>
 `;

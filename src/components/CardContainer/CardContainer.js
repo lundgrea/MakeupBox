@@ -44,15 +44,15 @@ export const CardContainer = ({category, data}) => {
     
   return (
     <article className="card-container">
-      <section className="results-category-box">
+      <section key='0' className="results-category-box">
         <h2 className="results-category-headline">{category[0]}</h2>
         {firstCards}
       </section>
-      <section className="results-category-box">
+      <section key='1' className="results-category-box">
         <h2 className="results-category-headline">{category[1]}</h2>
         {secondCards}
       </section>
-      <section className="results-category-box">
+      <section key='2' className="results-category-box">
         <h2 className="results-category-headline">{category[2]}</h2>
         {thirdCards}
       </section>

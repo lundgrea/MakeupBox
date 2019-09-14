@@ -12,6 +12,7 @@ exports[`Quiz should match the snapshot 1`] = `
       ]
     }
     handleChange={[Function]}
+    id={1}
     key="1"
     name="interest"
     question="What is your primary interest?"
@@ -26,6 +27,7 @@ exports[`Quiz should match the snapshot 1`] = `
       ]
     }
     handleChange={[Function]}
+    id={2}
     key="2"
     name="style"
     question="What style speaks most to you?"
@@ -40,6 +42,7 @@ exports[`Quiz should match the snapshot 1`] = `
       ]
     }
     handleChange={[Function]}
+    id={3}
     key="3"
     name="causes"
     question="What are your causes?"
@@ -54,6 +57,7 @@ exports[`Quiz should match the snapshot 1`] = `
       ]
     }
     handleChange={[Function]}
+    id={4}
     key="4"
     name="experience"
     question="What is your previous experience using makeup"
@@ -61,7 +65,9 @@ exports[`Quiz should match the snapshot 1`] = `
   <Link
     to="/results"
   >
-    submit answers
+    <button>
+      submit answers
+    </button>
   </Link>
 </fieldset>
 `;

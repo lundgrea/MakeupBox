@@ -1,90 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CardContainer should match the snapshot 1`] = `
-<article
-  className="card-container"
->
-  <section
-    className="results-category-box"
-  >
-    <h2
-      className="results-category-headline"
-    >
-      l
-    </h2>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-  </section>
-  <section
-    className="results-category-box"
-  >
-    <h2
-      className="results-category-headline"
-    >
-      i
-    </h2>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-  </section>
-  <section
-    className="results-category-box"
-  >
-    <h2
-      className="results-category-headline"
-    >
-      p
-    </h2>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-  </section>
-</article>
-`;
-
 exports[`CardContainer should match the snapshot with all data passed in correctly 1`] = `
 <article
   className="card-container"
 >
   <section
     className="results-category-box"
+    key="0"
   >
     <h2
       className="results-category-headline"
@@ -109,6 +31,7 @@ exports[`CardContainer should match the snapshot with all data passed in correct
   </section>
   <section
     className="results-category-box"
+    key="1"
   >
     <h2
       className="results-category-headline"
@@ -133,6 +56,7 @@ exports[`CardContainer should match the snapshot with all data passed in correct
   </section>
   <section
     className="results-category-box"
+    key="2"
   >
     <h2
       className="results-category-headline"
