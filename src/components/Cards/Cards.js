@@ -6,7 +6,7 @@ export const Cards = (props) => {
   return (
     <article>
       <p>{props.brand}</p>
-      <img>{props.img}</img>
+      {/* <img>{props.img}</img> */}
     </article>
   )
 }
