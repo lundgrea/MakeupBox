@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuizQuestion should match the snapshot with all data passed in correctly 1`] = `
+<article>
+  <h2>
+    What is your primary interest?
+  </h2>
+  <div
+    key="undefined0"
+  >
+    <input
+      name="interests"
+      onChange={[MockFunction]}
+      type="radio"
+      value="lips"
+    />
+    <label
+      htmlFor="lips"
+    >
+      lips
+    </label>
+  </div>
+  <div
+    key="undefined1"
+  >
+    <input
+      name="interests"
+      onChange={[MockFunction]}
+      type="radio"
+      value="eyes"
+    />
+    <label
+      htmlFor="eyes"
+    >
+      eyes
+    </label>
+  </div>
+</article>
+`;

@@ -8,7 +8,7 @@ export const isLoading = bool => ({
   bool
 })
 
-export const getResults = (results) => ({
+export const getResults = results => ({
   type: 'GET_RESULTS',
   results
 })

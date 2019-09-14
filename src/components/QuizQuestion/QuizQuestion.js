@@ -1,18 +1,17 @@
 import React from 'react';
 import './QuizQuestion.css'
 
-export const QuizQuestion = ({answers, question, key, name, handleChange}) => {
-
+export const QuizQuestion = ({answers, question, id, name, handleChange}) => {
   const buildAnswers = () => {
-    let answersList = answers.map(answer => {
+    let answersList = answers.map((answer, index) => {
     return (
-      <div>
+      <div key={id + `${index}`}>
         <input
           type="radio"
           name={name}
           value={answer}
+          key={id}
           onChange={handleChange}
-          key={key}
         ></input>
         <label htmlFor={answer}>{answer}</label>
       </div>

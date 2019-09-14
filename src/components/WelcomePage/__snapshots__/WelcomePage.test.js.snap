@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WelcomePage should match the snapshot 1`] = `
+<section>
+  <h2>
+    Welcome to makeupBOX
+  </h2>
+  <h3>
+    no experience required
+  </h3>
+  <p>
+    First, help us get to know you.
+  </p>
+  <Link
+    className="button-start-quiz"
+    to="/quiz"
+  >
+    <button>
+      START QUIZ
+    </button>
+  </Link>
+</section>
+`;

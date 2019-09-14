@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './ResultsPage.css';
-import { cleanedSearch, cleanedSearchResults } from '../../dataCleaner'
+import { cleanedSearch, cleanedSearchResults } from '../../dataCleaner/dataCleaner'
 import { connect } from 'react-redux';
 import { getResults, setResponses, isLoading, handleErrors } from "../../actions";
 import { fetchMakeup } from '../../apiCalls/apiCalls';

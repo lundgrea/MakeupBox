@@ -43,7 +43,7 @@ export class Quiz extends Component {
   generateQuiz = () => {
     return this.state.quizQuestions.map(question => {
       return (
-        <QuizQuestion question={question.question} answers={question.answers} key={question.id} name={question.name} handleChange={this.handleChange}/>
+        <QuizQuestion question={question.question} answers={question.answers} key={question.id} id={question.id} name={question.name} handleChange={this.handleChange}/>
       )
     })    
   }
@@ -57,7 +57,7 @@ export class Quiz extends Component {
     return (
       <fieldset>
         {this.generateQuiz()}
-        <Link to='/results'>submit answers</Link>
+        <Link to='/results'><button>submit answers</button></Link>
       </fieldset>
     )
   }

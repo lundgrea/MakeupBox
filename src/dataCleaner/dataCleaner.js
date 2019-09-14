@@ -52,7 +52,8 @@ export const cleanedSearch = (responses) => {
     }
     if (response === 'vegan') {
       return 'products.json?product_tags=Vegan'
-    }
+    } 
+    return response
   })
   return search
 }

@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cards should match the snapshot with all data passed in correctly 1`] = `
+<article
+  className="card"
+>
+  <img
+    alt="product"
+    className="card-img"
+    src="url"
+  />
+  <h3
+    className="card-brand"
+  >
+    Maybelline
+  </h3>
+  <h4
+    className="card-name"
+  >
+    Matte Life
+  </h4>
+  <p
+    className="card-description"
+  >
+    The best lipstick around
+  </p>
+  <h6
+    className="card-price"
+  >
+    $
+    7.00
+  </h6>
+  <p
+    className="card-tags"
+  >
+    gluten free
+  </p>
+</article>
+`;

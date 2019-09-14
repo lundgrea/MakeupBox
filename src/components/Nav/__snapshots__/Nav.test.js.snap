@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav should match the snapshot 1`] = `
+<nav>
+  <h1>
+    makeupBOX
+  </h1>
+  <NavLink
+    className="nav"
+    onClick={[Function]}
+    to="/"
+  >
+     Start Over 
+  </NavLink>
+</nav>
+`;
