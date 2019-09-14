@@ -4,12 +4,12 @@ import { connect } from 'react-redux';
 
 export const CardContainer = (props) => {
   console.log(props)
-  const answerOneCards = () => {
-    
-  }
-  const answerTwoCards = () => { 
 
-  }
+  // const answerOneCards = () => {
+  // }
+  // const answerTwoCards = () => { 
+
+  // }
   // const cards = props.map(result => {
   //   console.log(result)
   //   return result
