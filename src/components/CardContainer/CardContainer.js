@@ -5,13 +5,10 @@ import Cards from '../Cards/Cards'
 
 export const CardContainer = ({category, data}) => {
 
-
-
   const firstAnswerResults = data[0].slice(0,5)
   const secondAnswerResults = data[1].slice(0,5)
   const thirdAnswerResults = data[2].slice(0,5)
  
-
   const firstCards = firstAnswerResults.map(result => {
     return (
         <div>
@@ -46,17 +43,17 @@ export const CardContainer = ({category, data}) => {
   })
     
   return (
-    <article>
+    <article className="card-container">
       <section>
-        <h2>{category[0]}</h2>
+        <h2 className="results-category-headline">{category[0]}</h2>
         {firstCards}
       </section>
       <section>
-        <h2>{category[1]}</h2>
+        <h2 className="results-category-headline">{category[1]}</h2>
         {secondCards}
       </section>
       <section>
-        <h2>{category[2]}</h2>
+        <h2 className="results-category-headline">{category[2]}</h2>
         {thirdCards}
       </section>
     </article>

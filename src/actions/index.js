@@ -13,24 +13,6 @@ export const getResults = (results) => ({
   results
 })
 
-// export const getResultsOne = (results, num) => ({
-//   type: 'GET_RESULTS_1',
-//   results,
-//   num
-// })
-
-// export const getResultsTwo = (results, num) => ({
-//   type: 'GET_RESULTS_2',
-//   results,
-//   num
-// })
-
-// export const getResultsThree = (results, num) => ({
-//   type: 'GET_RESULTS_3',
-//   results,
-//   num
-// })
-
 export const setResponses = response => ({
   type: 'SET_RESPONSES',
   response

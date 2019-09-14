@@ -1,0 +1,7 @@
+.card-container{
+  display: flex;
+}
+
+.results-category-headline{
+  text-align: center;
+}
