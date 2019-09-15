@@ -7,10 +7,12 @@
 }
 
 .results-category-box {
-  border: 2px solid black;
+  border: 2px solid #8EA99E;
   border-radius: 2px;
   padding: 10px;
   margin: 10px;
-  background: black;
+  /* background: black; */
   color: white;
+  background-color: #8EA99E;
+
 }

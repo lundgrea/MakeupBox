@@ -13,25 +13,25 @@ export class Quiz extends Component {
       results: [], 
       quizQuestions: [
         {
-          question: 'What is your primary interest?', 
+          question: '1. What is your primary area of interest?', 
           answers: ['lips', 'eyes','face/body', 'nails'],
           id: 1,
           name: 'interest'
         },
         {
-          question: 'What style speaks most to you?', 
-          answers: ['bronzed','bold', 'natural', 'smokey'],
+          question: '2. What style describes you best?', 
+          answers: ['bronzed', 'bold', 'natural', 'smokey'],
           id: 2,
           name: 'style'
         },
         { 
-          question: 'What are your causes?',
+          question: '3. What causes do you care about?',
           answers: ['cruelty free', 'organic', 'non-gmo', 'vegan'],
           id: 3,
           name: 'causes'
         }, 
         {
-          question: 'What is your previous experience using makeup',
+          question: '4. What previous experience do you have using makeup?',
           answers: ['none', 'some', 'a bit', 'absolute master'],
           id: 4,
           name: 'experience'
@@ -55,9 +55,10 @@ export class Quiz extends Component {
 
   render() {
     return (
-      <fieldset>
+      <fieldset className="quiz-container">
+        <h2 className="quiz-headline">Help Us Tailor Your Results To Suit Your Needs</h2>
         {this.generateQuiz()}
-        <Link to='/results'><button>submit answers</button></Link>
+        <Link to='/results'><button className="button-quiz-submit">submit answers</button></Link>
       </fieldset>
     )
   }

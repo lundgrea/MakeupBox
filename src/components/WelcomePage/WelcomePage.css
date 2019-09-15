@@ -1,0 +1,26 @@
+.welcome-page {
+  text-align: center;
+  border: 2px solid grey;
+  border-radius: 6px;
+  margin: 50px 400px 0px 400px;
+  padding: 20px 10px 20px 10px;
+  color: #242B28;
+  background-color: #8EA99E;
+} 
+
+.welcome-header {
+  font-size: 40px;
+  margin: 10px 0px 5px 0px;
+}
+
+.welcome-CTA {
+  margin: 40px 60px 10px 60px;
+}
+
+.welcome-experience {
+  margin: 40px 0px 10px 0px;
+}
+
+.button-start-quiz {
+  margin: 30px 10px 10px 10px;
+}
