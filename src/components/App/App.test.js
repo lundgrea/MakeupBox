@@ -4,8 +4,8 @@ import { App } from './App';
 import { MemoryRouter } from "react-router";
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
-import { Quiz } from '../Quiz/Quiz'
-import { ResultsPage } from '../ResultsPage/ResultsPage'
+import { Quiz } from '../../containers/Quiz/Quiz'
+import { ResultsPage } from '../../containers/ResultsPage/ResultsPage'
 
 
 describe('App', () => {
@@ -14,7 +14,6 @@ describe('App', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
-
 
 describe('Router', () => {
   it('should show the Main page when nothing is selected', () => {

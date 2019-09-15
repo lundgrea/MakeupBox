@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Route } from 'react-router-dom';
-import Nav from '../../components/Nav/Nav';
-import WelcomePage from '../../components/WelcomePage/WelcomePage'
+import Nav from '../Nav/Nav';
+import WelcomePage from '../WelcomePage/WelcomePage'
 import Quiz from '../../containers/Quiz/Quiz'
 import ResultsPage from '../../containers/ResultsPage/ResultsPage'
 
