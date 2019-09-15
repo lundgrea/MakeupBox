@@ -3,7 +3,7 @@ img {
 }
 
 .card {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   border-radius: 5px;
   min-width: 30vw;  
   margin: 10px 2px 0px 2px;
