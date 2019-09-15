@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './ResultsPage.css';
 import { cleanedSearch, cleanedSearchResults } from '../../dataCleaner/dataCleaner'
 import { connect } from 'react-redux';
-import { getResults, setResponses, isLoading, handleErrors } from "../../actions";
+import { getResults, isLoading, handleErrors } from "../../actions";
 import { fetchMakeup } from '../../apiCalls/apiCalls';
 import { CardContainer } from '../../components/CardContainer/CardContainer'
 
@@ -58,8 +58,7 @@ export const mapStateToProps = store => ({
 export const mapDispatchToProps = dispatch => ({
   isLoading: bool => dispatch(isLoading(bool)),
   handleErrors: error => dispatch(handleErrors(error)),
-  getResults: (results) => dispatch(getResults(results)),
-  setResponses: response => dispatch(setResponses(response))
+  getResults: (results) => dispatch(getResults(results))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ResultsPage)
