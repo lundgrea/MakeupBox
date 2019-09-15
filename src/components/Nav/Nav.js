@@ -1,10 +1,15 @@
 import React from 'react';
 import './Nav.css'
 import { NavLink, Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { clearResults, clearResponses } from "../../actions";
 
-export const Nav = () => {
+
+export const Nav = (props) => {
 
 const emptyFields = () => {
+  props.clearResults();
+  props.clearResponses();
   console.log('in the empty')
 }
 
@@ -22,5 +27,11 @@ return (
    )
 }
 
-export default Nav
+export const mapDispatchToProps = dispatch => ({
+  clearResults: () => dispatch(clearResults()),
+  clearResponses: () => dispatch(clearResponses())
+});
+
+
+export default connect(null, mapDispatchToProps)(Nav)
 

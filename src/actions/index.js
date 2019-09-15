@@ -13,7 +13,17 @@ export const getResults = results => ({
   results
 })
 
+export const clearResults = results => ({
+  type: 'CLEAR_RESULTS',
+  results
+})
+
 export const setResponses = response => ({
   type: 'SET_RESPONSES',
+  response
+})
+
+export const clearResponses = response => ({
+  type: 'CLEAR_RESPONSES',
   response
 })

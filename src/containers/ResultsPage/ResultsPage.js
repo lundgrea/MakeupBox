@@ -58,7 +58,7 @@ export const mapStateToProps = store => ({
 export const mapDispatchToProps = dispatch => ({
   isLoading: bool => dispatch(isLoading(bool)),
   handleErrors: error => dispatch(handleErrors(error)),
-  getResults: (results) => dispatch(getResults(results))
+  getResults: results => dispatch(getResults(results))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ResultsPage)
