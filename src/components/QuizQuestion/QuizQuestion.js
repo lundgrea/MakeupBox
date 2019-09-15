@@ -5,7 +5,7 @@ export const QuizQuestion = ({answers, question, id, name, handleChange}) => {
   const buildAnswers = () => {
     let answersList = answers.map((answer, index) => {
     return (
-      <div key={id + `${index}`}>
+      <div className="quiz-question-answers" key={id + `${index}`}>
         <input
           type="radio"
           name={name}
@@ -21,8 +21,8 @@ export const QuizQuestion = ({answers, question, id, name, handleChange}) => {
   }
 
   return (
-    <article>
-      <h2>{question}</h2>
+    <article className="quiz-question-full">
+      <h3 className="quiz-question">{question}</h3>
       {buildAnswers()}
     </article>
   )

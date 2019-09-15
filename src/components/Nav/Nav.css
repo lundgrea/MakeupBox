@@ -1,0 +1,30 @@
+nav {
+  max-height: 75vh;
+  width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 0px 0px 0px;
+    padding: 10px 10px 10px 10px;
+    background-color: black;
+    color: white;
+}
+
+.logo{
+  color: white;
+}
+.nav-menu {
+  margin: 10px 50px 10px 10px;
+  font-size: 22px;
+  color: white;
+}
+
+h1 {
+  font-size: 60px;
+  margin: 10px 10px 10px 20px;
+}
+
+.tagline {
+  font-size: 16px;
+  margin: 0px 0px 0px 20px;
+}

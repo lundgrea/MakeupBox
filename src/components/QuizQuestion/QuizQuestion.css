@@ -1,0 +1,16 @@
+.quiz-question-answers {
+  margin: 10px 10px 10px 10px;
+  text-align:left;
+  display:inline;
+}
+
+.quiz-question{
+  font-size: 20px;
+}
+
+.quiz-question-full {
+  margin: 40px 10px 40px 10px;
+  background-color: #A09D80;
+  padding: 10px 10px 20px 10px;
+  border-radius: 2px;
+}
