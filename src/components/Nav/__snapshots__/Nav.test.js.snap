@@ -2,15 +2,37 @@
 
 exports[`Nav should match the snapshot 1`] = `
 <nav>
-  <h1>
-    makeupBOX
-  </h1>
+  <div
+    className="logo-lockup"
+  >
+    <header>
+      <img
+        alt="logo"
+        className="logo-image"
+        src="https://image.flaticon.com/icons/png/512/2081/2081669.png"
+      />
+      <Link
+        to="/"
+      >
+        <h1
+          className="logo"
+        >
+          TAKEUP
+        </h1>
+      </Link>
+    </header>
+    <h2
+      className="tagline"
+    >
+      a makeup exploration tool for men
+    </h2>
+  </div>
   <NavLink
-    className="nav"
+    className="nav-menu"
     onClick={[Function]}
     to="/"
   >
-     Start Over 
+     start over 
   </NavLink>
 </nav>
 `;

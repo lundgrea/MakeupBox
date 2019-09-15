@@ -1,21 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`WelcomePage should match the snapshot 1`] = `
-<section>
-  <h2>
-    Welcome to makeupBOX
+<section
+  className="welcome-page"
+>
+  <h2
+    className="welcome-header"
+  >
+    Welcome to TAKEUP
   </h2>
   <h3>
-    no experience required
+    A guided makeup exploration experience built just for men.
   </h3>
-  <p>
-    First, help us get to know you.
+  <h4
+    className="welcome-experience"
+  >
+    No experience necessary.
+  </h4>
+  <p
+    className="welcome-CTA"
+  >
+    To start, help us get to know you. Complete the short quiz so we can get you on your way.
   </p>
   <Link
-    className="button-start-quiz"
     to="/quiz"
   >
-    <button>
+    <button
+      className="button-start-quiz"
+    >
       START QUIZ
     </button>
   </Link>

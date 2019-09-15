@@ -1,11 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`QuizQuestion should match the snapshot with all data passed in correctly 1`] = `
-<article>
-  <h2>
+<article
+  className="quiz-question-full"
+>
+  <h3
+    className="quiz-question"
+  >
     What is your primary interest?
-  </h2>
+  </h3>
   <div
+    className="quiz-question-answers"
     key="undefined0"
   >
     <input
@@ -21,6 +26,7 @@ exports[`QuizQuestion should match the snapshot with all data passed in correctl
     </label>
   </div>
   <div
+    className="quiz-question-answers"
     key="undefined1"
   >
     <input
