@@ -31,6 +31,14 @@ describe('actions', () => {
     expect(results).toEqual(expectedAction)
   })
 
+  it('should have a type of CLEAR_RESULTS', () => {
+    const expectedAction = {
+      type: 'CLEAR_RESULTS'
+    }
+    const results = actions.clearResults()
+    expect(results).toEqual(expectedAction)
+  })
+
   it('should have a type of SET_RESPONSES', () => {
     const mockResponse = ['lips', 'bold', 'vegan', 'sometimes']
     const expectedAction = {
@@ -38,6 +46,15 @@ describe('actions', () => {
       response: ['lips', 'bold', 'vegan', 'sometimes']
     }
     const results = actions.setResponses(mockResponse)
+    expect(results).toEqual(expectedAction)
+  })
+
+
+  it('should have a type of CLEAR_RESPONSES', () => {
+    const expectedAction = {
+      type: 'CLEAR_RESPONSES'
+    }
+    const results = actions.clearResponses()
     expect(results).toEqual(expectedAction)
   })
 })
