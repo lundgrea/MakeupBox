@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import { connect } from 'react-redux';
-import { isLoading, handleErrors } from "../../actions";
 import { Route } from 'react-router-dom';
 import Nav from '../../components/Nav/Nav';
 import WelcomePage from '../../components/WelcomePage/WelcomePage'
 import Quiz from '../../containers/Quiz/Quiz'
 import ResultsPage from '../../containers/ResultsPage/ResultsPage'
-
 
 // import PropTypes from 'prop-types'
 
@@ -32,14 +29,4 @@ export class App extends Component {
   }
 }
 
-export const mapStateToProps = store => ({
-  error: store.hasErrored,
-  isLoading: store.isLoading
-})
-
-export const mapDispatchToProps = dispatch => ({
-  isLoading: bool => dispatch(isLoading(bool)),
-  handleErrors: error => dispatch(handleErrors(error))
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App
