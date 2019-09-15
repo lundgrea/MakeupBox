@@ -3,7 +3,6 @@ import { shallow } from 'enzyme';
 import { ResultsPage, mapStateToProps, mapDispatchToProps } from './ResultsPage';
 import { handleErrors, isLoading, getResults } from '../../actions'
 
-
 describe('ResultsPage', () => {
   it('should match the snapshot', () => {
     const wrapper = shallow(<ResultsPage />);

@@ -2,7 +2,7 @@
   text-align: center;
   /* border: 2px solid grey; */
   border-radius: 6px;
-  margin: 50px 400px 0px 400px;
+  margin: 50px 300px 0px 300px;
   padding: 20px 10px 20px 10px;
   color: #242B28;
   background-color: #8EA99E;
@@ -23,4 +23,19 @@
 
 .button-start-quiz {
   margin: 30px 10px 10px 10px;
+  background-color: #242B28;
+  color: #8EA99E;
+  border: none;
+  border-radius: 2px;
+    width: 45%;
+    height: 40px;
+    font-size: 20px;
+}
+
+.button-start-quiz:hover {
+  color: white;
+}
+
+.welcome-subhead {
+ margin: 20px 55px 10px 55px
 }

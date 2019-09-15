@@ -11,9 +11,10 @@ export const QuizQuestion = ({answers, question, id, name, handleChange}) => {
           name={name}
           value={answer}
           key={id}
+          id={id + `${index}`}
           onChange={handleChange}
         ></input>
-        <label htmlFor={answer}>{answer}</label>
+        <label htmlFor={id + `${index}`}>{answer}</label>
       </div>
     )
     })

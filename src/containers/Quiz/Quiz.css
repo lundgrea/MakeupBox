@@ -11,10 +11,18 @@ fieldset {
 
 label {
   margin: 0px 0px 0px 10px;
+  font-size: 22px;
 }
 
 .button-quiz-submit {
   margin: 0px 0px 0px 0px;
+  background-color: #242B28;
+  color: #8EA99E;
+  border: none;
+}
+
+.button-quiz-submit:hover {
+  color: white;
 }
 
 .quiz-headline {

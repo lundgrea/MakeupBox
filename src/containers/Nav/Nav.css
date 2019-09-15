@@ -24,6 +24,10 @@ header {
   color: white;
 }
 
+.nav-menu:hover {
+color: #8EA99E
+}
+
 h1 {
   font-size: 60px;
   margin: 10px 10px 10px 10px;
@@ -31,7 +35,7 @@ h1 {
 
 .tagline {
   font-size: 16px;
-  margin: 0px 0px 0px 20px;
+  margin: 0px 0px 0px 30px;
 }
 
 .logo-image {
