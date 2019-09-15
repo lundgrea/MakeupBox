@@ -10,7 +10,6 @@ export const Nav = (props) => {
 const emptyFields = () => {
   props.clearResults();
   props.clearResponses();
-  console.log('in the empty')
 }
 
 return (

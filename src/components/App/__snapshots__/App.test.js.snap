@@ -4,7 +4,7 @@ exports[`App should match the snapshot 1`] = `
 <main
   className="main"
 >
-  <Nav />
+  <Connect(Nav) />
   <Route
     component={[Function]}
     exact={true}
