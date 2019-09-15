@@ -10,9 +10,12 @@ const emptyFields = () => {
 
 return (
   <nav>
-    <div classname="logo-lockup">
-      <Link to='/'><h1 className="logo">TAKEUP</h1></Link>
-      <h2 className="tagline">a makeup exploration tool for men</h2>
+    <div className='logo-lockup'>
+      <header>
+        <img className='logo-image' alt='logo' src='https://image.flaticon.com/icons/png/512/2081/2081669.png'/>
+        <Link to='/'><h1 className='logo'>TAKEUP</h1></Link>
+      </header>
+      <h2 className='tagline'>a makeup exploration tool for men</h2>
     </div>
     <NavLink to='/' onClick={emptyFields} className='nav-menu'> start over </NavLink>
    </nav>
