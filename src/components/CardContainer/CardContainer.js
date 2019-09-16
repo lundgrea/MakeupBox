@@ -2,9 +2,11 @@ import React from 'react';
 import './CardContainer.css';
 import Cards from '../Cards/Cards';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 
-export const CardContainer = ({category, data}) => {
+export const CardContainer = ({error, category, data}) => {
+
 
   const firstAnswerResults = data[0].slice(0,7);
   const secondAnswerResults = data[1].slice(0,7);
@@ -44,6 +46,8 @@ export const CardContainer = ({category, data}) => {
   });
     
   return (
+    <>
+    {error && <p>PLEASE COMPLETE QUIZ</p>}
     <article className='card-container'>
       <section key='0' className='results-category-box'>
         <h2 className='results-category-headline'>{category[0]}</h2>
@@ -58,10 +62,15 @@ export const CardContainer = ({category, data}) => {
         {thirdCards}
       </section>
     </article>
+    </>
   );
 };
 
-export default CardContainer;
+export const mapStateToProps = store => ({
+  error: store.hasErrored
+})
+
+export default connect(mapStateToProps)(CardContainer);
 
 CardContainer.propTypes = {
   data:PropTypes.array.isRequired,
