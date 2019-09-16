@@ -6,7 +6,7 @@ import { clearResults, clearResponses } from '../../actions';
 import PropTypes from 'prop-types';
 
 
-export const Nav = (props) => {
+export const Nav = props => {
 
 const emptyFields = () => {
   props.clearResults();
