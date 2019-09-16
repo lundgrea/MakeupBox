@@ -9,25 +9,20 @@ describe('ResultsPage', () => {
     const wrapper = shallow(<ResultsPage />);
     expect(wrapper).toMatchSnapshot();
   }); 
-
-  // it('should update state when the page finishes loading', () => {
-  //   const wrapper = shallow(<ResultsPage />);
-  //   expect(wrapper.state('isLoading')).toEqual(true);
-  //   wrapper.instance().componentDidMount()
-  //   expect(wrapper.state('isLoading')).toEqual(false)
-  // });
 });
 
 
 describe('mapStateToProps', () => {
   it('should return the quiz responses list ', () => {
     const mockState = {
+      hasErrored: '',
       isLoading: false,
       results: [[{makeup1: '1'}, {makeup2: '2'}], [{makeup3: '3'}, {makeup4: '4'}], [{makeup5: '5'},{makeup6: '6'}] ],
       responses: ['lips', 'bold', 'cruelty-free', 'none']
     }; 
     const expected = {
-      isLoading: false,
+      errors: '',
+      loading: false,
       results: [[{makeup1: '1'}, {makeup2: '2'}], [{makeup3: '3'}, {makeup4: '4'}], [{makeup5: '5'},{makeup6: '6'}] ],
       responses: ['lips', 'bold', 'cruelty-free', 'none']
     };
@@ -37,12 +32,14 @@ describe('mapStateToProps', () => {
 
   it('should return the results from the fetch in an array', () => {
     const mockState = {
+      hasErrored: '',
       isLoading: false,
       results: [[{makeup1: '1'}, {makeup2: '2'}], [{makeup3: '3'}, {makeup4: '4'}], [{makeup5: '5'},{makeup6: '6'}] ],
       responses: ['lips', 'bold', 'cruelty-free', 'none']
     }; 
     const expected = {
-      isLoading: false,
+      errors: '',
+      loading: false,
       results: [[{makeup1: '1'}, {makeup2: '2'}], [{makeup3: '3'}, {makeup4: '4'}], [{makeup5: '5'},{makeup6: '6'}] ],
       responses: ['lips', 'bold', 'cruelty-free', 'none']
     }; 
@@ -50,14 +47,16 @@ describe('mapStateToProps', () => {
     expect(mappedProps).toEqual(expected);
   });
 
-  it('should return the loading status of the applicaiton', () => {
+  it('should return the loading status of the application', () => {
     const mockState = {
+      hasErrored: '',
       isLoading: false,
       results: [[{makeup1: '1'}, {makeup2: '2'}], [{makeup3: '3'}, {makeup4: '4'}], [{makeup5: '5'},{makeup6: '6'}] ],
       responses: ['lips', 'bold', 'cruelty-free', 'none']
     }; 
     const expected = {
-      isLoading: false,
+      errors: '',
+      loading: false,
       results: [[{makeup1: '1'}, {makeup2: '2'}], [{makeup3: '3'}, {makeup4: '4'}], [{makeup5: '5'},{makeup6: '6'}] ],
       responses: ['lips', 'bold', 'cruelty-free', 'none']
     }; 

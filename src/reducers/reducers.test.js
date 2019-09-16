@@ -36,7 +36,7 @@ describe('loadingReducer', () => {
       type: 'SET_RESPONSES',
       bool: 'lips'
     };
-    expect(loadingReducer(undefined, mockAction)).toEqual(false)
+    expect(loadingReducer(undefined, mockAction)).toEqual(true)
   });
 });
 
