@@ -48,7 +48,7 @@ export default connect(null, mapDispatchToProps)(Quiz);
 
 
 Quiz.propTypes = {
-  history:PropTypes.object.isRequired,
-  location:PropTypes.object.isRequired,
-  match:PropTypes.object.isRequired,
+  history:PropTypes.object,
+  location:PropTypes.object,
+  match:PropTypes.object
 };

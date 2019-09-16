@@ -36,7 +36,7 @@ export default QuizQuestion;
 QuizQuestion.propTypes = {
   answers:PropTypes.array.isRequired,
   handleChange:PropTypes.func.isRequired,
-  id:PropTypes.number.isRequired,
+  id:PropTypes.number,
   name:PropTypes.string.isRequired,
   question:PropTypes.string.isRequired,
 };

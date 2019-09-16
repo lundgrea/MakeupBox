@@ -19,13 +19,13 @@ export const Cards = (props) => {
 export default Cards;
 
 Cards.propTypes = {
-  brand:PropTypes.string.isRequired,
-  color:PropTypes.array.isRequired,
-  description:PropTypes.string.isRequired,
-  id:PropTypes.number.isRequired,
-  img:PropTypes.string.isRequired,
-  name:PropTypes.string.isRequired,
-  price:PropTypes.string.isRequired,
-  tags:PropTypes.array.isRequired,
-  type:PropTypes.string.isRequired,
+  brand:PropTypes.string,
+  color:PropTypes.array,
+  description:PropTypes.string,
+  id:PropTypes.number,
+  img:PropTypes.string,
+  name:PropTypes.string,
+  price:PropTypes.string,
+  tags:PropTypes.array,
+  type:PropTypes.string,
 };
