@@ -1,6 +1,8 @@
 # TAKEUP
 
-TAKEUP is an introductory makeup application designed for men. 
+TAKEUP is an introductory makeup tool designed for men interested in exploring the wide world of cosmetics. The application allows visitors to provide their specific curiosities and preferences serving up product data related to these interests. Reducing the noise TAKEUP displays a limited number of search results within an easy to navigate guided user interface. 
+
+Conceived, planned, built and tested individually over the course of 
 
 ## Technologies Utilized
  - React
