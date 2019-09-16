@@ -1,68 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# TAKEUP
 
-## Available Scripts
+TAKEUP is an introductory makeup tool designed for men interested in exploring the wide world of cosmetics. The application allows visitors to provide their specific curiosities and then serves up product data related to these interests. Reducing the noise TAKEUP displays a limited number of search results within an easy to navigate guided user interface.
 
-In the project directory, you can run:
+Planned, designed, built and tested as an individual project over the course of five days TAKEUP utilizes React to handle user interactions and Redux to store and direct application data. User flow managed with React Router guides the visitor on a private tour through their custom cosmetic experience. Asynchronous JavaScript fetch calls have been implemented with loading and error handling to ensure an engaged user experience throughout active network requests. An Enzyme/Jest testing suite accompanies the program.
 
-### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies Utilized
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+ - React
+ - React Router
+ - Redux
+ - [Makeup API](http://makeup-api.herokuapp.com/) fetch network requests
+ - PropTypes
+ - Enzyme/Jest
+ - CSS
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup
 
-### `npm run build`
+Clone down the UI repository.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Install the application's dependencies from within the cloned directory:
+```bash
+npm install
+```
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Then launch the application within the browser:
+```bash
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Open [http://localhost:3000](http://localhost:3000) to view the application in your browser.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Testing
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Application components and routes have been tested using various unit testing techniques including snapshots, class method and functional, asynchronous, Router, and Redux testing. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+npm test
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Developer
 
-## Learn More
+ - Alyssa Lundgren [@lundgrea](https://github.com/lundgrea)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Screenshots
+![](src/Images/WelcomePage.png)
+![](src/Images/Quiz.png)
+![](src/Images/Results.png)

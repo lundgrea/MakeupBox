@@ -20,10 +20,10 @@ let mockStore, props, storeInstance;
 beforeEach(()=> {
   mockStore = configureStore([])
   props = {
-    hasErrored: jest.fn(),
-    isLoading: jest.fn(),
-    results: jest.fn(),
-    responses: jest.fn()
+    hasErrored: '',
+    isLoading: false,
+    results: [],
+    responses: []
   };
   storeInstance = mockStore(props)
 })
