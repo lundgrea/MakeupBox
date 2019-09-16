@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Route } from 'react-router-dom';
-import Nav from '../Nav/Nav';
+import Nav from '../../containers/Nav/Nav';
 import WelcomePage from '../WelcomePage/WelcomePage'
 import Quiz from '../../containers/Quiz/Quiz'
 import ResultsPage from '../../containers/ResultsPage/ResultsPage'

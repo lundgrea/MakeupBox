@@ -9,8 +9,10 @@ exports[`WelcomePage should match the snapshot 1`] = `
   >
     Welcome to TAKEUP
   </h2>
-  <h3>
-    A guided makeup exploration experience built just for men.
+  <h3
+    className="welcome-subhead"
+  >
+    A guided makeup exploration experience built just for men interested in taking up makeup.
   </h3>
   <h4
     className="welcome-experience"

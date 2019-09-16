@@ -11,10 +11,23 @@ fieldset {
 
 label {
   margin: 0px 0px 0px 10px;
+  font-size: 22px;
 }
 
 .button-quiz-submit {
-  margin: 0px 0px 0px 0px;
+  border: none;
+  margin: 10px 10px 10px 10px;
+  background-color: #242B28;
+  color: #8EA99E;
+  border: none;
+  border-radius: 2px;
+  width: 45%;
+  height: 40px;
+  font-size: 20px;
+}
+
+.button-quiz-submit:hover {
+  color: white;
 }
 
 .quiz-headline {

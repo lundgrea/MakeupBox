@@ -64,6 +64,14 @@ describe('responseReducer', () => {
     };
     expect(responseReducer(['lashes'], mockAction)).toEqual(['lashes', 'lips'])
   });
+
+
+  it('should clear the store if CLEAR_RESPONSES is met',() => {
+    let mockAction = {
+      type: 'CLEAR_RESPONSES'
+    }
+    expect(responseReducer(undefined, mockAction)).toEqual([])
+  })
 });
 
 describe('resultsReducer', () => {
@@ -84,11 +92,18 @@ describe('resultsReducer', () => {
     expect(resultsReducer(mockState, mockAction)).toEqual([[{'eyeshadow1': 'wet n wild'}, {'eyeshadow2': 'almay'}], [{'mascara1': 'maybelline'}, {'mascara2': 'mac'}]])
   })
 
-  it('should put not change the store if GET_RESULTS is not met', () => {
+  it('should not change the store if GET_RESULTS is not met', () => {
     let mockAction = {
       type: 'SET_RESPONSES',
       bool: 'lips'
     };
     expect(resultsReducer(undefined, mockAction)).toEqual([])
   });
+
+  it('should clear the store if CLEAR_RESULTS is met',() => {
+    let mockAction = {
+      type: 'CLEAR_RESULTS'
+    }
+    expect(resultsReducer(undefined, mockAction)).toEqual([])
+  })
 });

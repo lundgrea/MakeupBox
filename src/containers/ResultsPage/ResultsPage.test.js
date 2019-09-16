@@ -1,8 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { ResultsPage, mapStateToProps, mapDispatchToProps } from './ResultsPage';
-import {handleErrors, isLoading, getResults} from '../../actions'
-
+import { handleErrors, isLoading, getResults } from '../../actions'
 
 describe('ResultsPage', () => {
   it('should match the snapshot', () => {
@@ -65,7 +64,7 @@ describe('mapDispatchToProps', () => {
     const mappedProps = mapDispatchToProps(mockDispatch);
     mappedProps.isLoading(false);
     expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
-  })
+  });
 
   it('should call dispatch with a handleError action', () => {
     const mockDispatch = jest.fn();
@@ -73,12 +72,13 @@ describe('mapDispatchToProps', () => {
     const mappedProps = mapDispatchToProps(mockDispatch);
     mappedProps.handleErrors('error message');
     expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
-  })
+  });
+
   it('should call dispatch with getResults action', () => {
     const mockDispatch = jest.fn();
     const actionToDispatch = getResults([[{makeup1: '1'}, {makeup2: '2'}], [{makeup3: '3'}, {makeup4: '4'}], [{makeup5: '5'},{makeup6: '6'}] ]);
     const mappedProps = mapDispatchToProps(mockDispatch);
     mappedProps.getResults([[{makeup1: '1'}, {makeup2: '2'}], [{makeup3: '3'}, {makeup4: '4'}], [{makeup5: '5'},{makeup6: '6'}] ]);
     expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
-  })
+  });
 })
