@@ -13,8 +13,8 @@ export const WelcomePage = () => {
       <p className='welcome-CTA'>To start, help us get to know you. Complete the short quiz so we can get you on your way.</p>
       <Link to='/quiz'><button className='button-start-quiz'>START QUIZ</button></Link>
     </section>
-  )
-}
+  );
+};
 
 export default WelcomePage;
 

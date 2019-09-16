@@ -2,7 +2,8 @@ import React from 'react';
 import './Nav.css'
 import { NavLink, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { clearResults, clearResponses } from "../../actions";
+import { clearResults, clearResponses } from '../../actions';
+import PropTypes from 'prop-types';
 
 
 export const Nav = (props) => {
@@ -10,7 +11,7 @@ export const Nav = (props) => {
 const emptyFields = () => {
   props.clearResults();
   props.clearResponses();
-}
+};
 
 return (
   <nav>
@@ -23,8 +24,8 @@ return (
     </div>
     <NavLink to='/' onClick={emptyFields} className='nav-menu'> start over </NavLink>
    </nav>
-   )
-}
+   );
+};
 
 export const mapDispatchToProps = dispatch => ({
   clearResults: () => dispatch(clearResults()),
@@ -32,5 +33,10 @@ export const mapDispatchToProps = dispatch => ({
 });
 
 
-export default connect(null, mapDispatchToProps)(Nav)
+export default connect(null, mapDispatchToProps)(Nav);
 
+
+Nav.propTypes = {
+  clearResponses:PropTypes.func.isRequired,
+  clearResults:PropTypes.func.isRequired,
+};
