@@ -14,13 +14,14 @@ exports[`QuizQuestion should match the snapshot with all data passed in correctl
     key="undefined0"
   >
     <input
+      id="undefined0"
       name="interests"
       onChange={[MockFunction]}
       type="radio"
       value="lips"
     />
     <label
-      htmlFor="lips"
+      htmlFor="undefined0"
     >
       lips
     </label>
@@ -30,13 +31,14 @@ exports[`QuizQuestion should match the snapshot with all data passed in correctl
     key="undefined1"
   >
     <input
+      id="undefined1"
       name="interests"
       onChange={[MockFunction]}
       type="radio"
       value="eyes"
     />
     <label
-      htmlFor="eyes"
+      htmlFor="undefined1"
     >
       eyes
     </label>
