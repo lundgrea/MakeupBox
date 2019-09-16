@@ -1,13 +1,14 @@
 import React from 'react';
 import './CardContainer.css';
-// import { connect } from 'react-redux';
-import Cards from '../Cards/Cards'
+import Cards from '../Cards/Cards';
+import PropTypes from 'prop-types';
+
 
 export const CardContainer = ({category, data}) => {
 
-  const firstAnswerResults = data[0].slice(0,5)
-  const secondAnswerResults = data[1].slice(0,5)
-  const thirdAnswerResults = data[2].slice(0,5)
+  const firstAnswerResults = data[0].slice(0,5);
+  const secondAnswerResults = data[1].slice(0,5);
+  const thirdAnswerResults = data[2].slice(0,5);
  
   const firstCards = firstAnswerResults.map(result => {
     return (
@@ -17,8 +18,8 @@ export const CardContainer = ({category, data}) => {
           key={result.id}
           />
         </div>
-      )
-  })
+      );
+  });
 
   const secondCards = secondAnswerResults.map(result => {
     return (
@@ -28,8 +29,8 @@ export const CardContainer = ({category, data}) => {
           key={result.id}
           />
         </div>
-      )
-  })
+      );
+  });
 
   const thirdCards = thirdAnswerResults.map(result => {
     return (
@@ -39,8 +40,8 @@ export const CardContainer = ({category, data}) => {
           key={result.id}
           />
         </div>
-      )
-  })
+      );
+  });
     
   return (
     <article className="card-container">
@@ -57,7 +58,12 @@ export const CardContainer = ({category, data}) => {
         {thirdCards}
       </section>
     </article>
-  )
-}
+  );
+};
 
-export default CardContainer
+export default CardContainer;
+
+CardContainer.propTypes = {
+  data:PropTypes.array.isRequired ,
+  category: PropTypes.array.isRequired  
+};

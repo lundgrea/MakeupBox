@@ -1,17 +1,25 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
-import './WelcomePage.css'
+import {Link} from 'react-router-dom';
+import './WelcomePage.css';
+import PropTypes from 'prop-types';
+
 
 export const WelcomePage = () => {
   return (
-    <section className="welcome-page">
-      <h2 className="welcome-header">Welcome to TAKEUP</h2>
-      <h3 className="welcome-subhead">A guided makeup exploration experience built just for men interested in taking up makeup.</h3>
-      <h4 className="welcome-experience">No experience necessary.</h4>
-      <p className="welcome-CTA">To start, help us get to know you. Complete the short quiz so we can get you on your way.</p>
+    <section className='welcome-page'>
+      <h2 className='welcome-header'>Welcome to TAKEUP</h2>
+      <h3 className='welcome-subhead'>A guided makeup exploration experience built just for men interested in taking up makeup.</h3>
+      <h4 className='welcome-experience'>No experience necessary.</h4>
+      <p className='welcome-CTA'>To start, help us get to know you. Complete the short quiz so we can get you on your way.</p>
       <Link to='/quiz'><button className='button-start-quiz'>START QUIZ</button></Link>
     </section>
   )
 }
 
 export default WelcomePage;
+
+WelcomePage.propTypes = {
+  history:PropTypes.object.isRequired,
+  location:PropTypes.object.isRequired,
+  match:PropTypes.object.isRequired,
+};
