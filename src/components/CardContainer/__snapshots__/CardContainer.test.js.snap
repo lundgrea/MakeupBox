@@ -13,22 +13,34 @@ exports[`CardContainer should match the snapshot with all data passed in correct
     >
       l
     </h2>
-    <div>
+    <div
+      key="0"
+    >
       <Cards />
     </div>
-    <div>
+    <div
+      key="1"
+    >
       <Cards />
     </div>
-    <div>
+    <div
+      key="2"
+    >
       <Cards />
     </div>
-    <div>
+    <div
+      key="3"
+    >
       <Cards />
     </div>
-    <div>
+    <div
+      key="4"
+    >
       <Cards />
     </div>
-    <div>
+    <div
+      key="5"
+    >
       <Cards />
     </div>
   </section>
@@ -41,22 +53,34 @@ exports[`CardContainer should match the snapshot with all data passed in correct
     >
       i
     </h2>
-    <div>
+    <div
+      key="0"
+    >
       <Cards />
     </div>
-    <div>
+    <div
+      key="1"
+    >
       <Cards />
     </div>
-    <div>
+    <div
+      key="2"
+    >
       <Cards />
     </div>
-    <div>
+    <div
+      key="3"
+    >
       <Cards />
     </div>
-    <div>
+    <div
+      key="4"
+    >
       <Cards />
     </div>
-    <div>
+    <div
+      key="5"
+    >
       <Cards />
     </div>
   </section>
@@ -69,22 +93,34 @@ exports[`CardContainer should match the snapshot with all data passed in correct
     >
       p
     </h2>
-    <div>
+    <div
+      key="0"
+    >
       <Cards />
     </div>
-    <div>
+    <div
+      key="1"
+    >
       <Cards />
     </div>
-    <div>
+    <div
+      key="2"
+    >
       <Cards />
     </div>
-    <div>
+    <div
+      key="3"
+    >
       <Cards />
     </div>
-    <div>
+    <div
+      key="4"
+    >
       <Cards />
     </div>
-    <div>
+    <div
+      key="5"
+    >
       <Cards />
     </div>
   </section>

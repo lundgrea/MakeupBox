@@ -10,9 +10,9 @@ export const CardContainer = ({category, data}) => {
   const secondAnswerResults = data[1].slice(0,7);
   const thirdAnswerResults = data[2].slice(0,7);
  
-  const firstCards = firstAnswerResults.map(result => {
+  const firstCards = firstAnswerResults.map((result, index) => {
     return (
-        <div key={result.id}>
+        <div key={index}>
           <Cards 
           {...result}
           key={result.id}
@@ -21,9 +21,9 @@ export const CardContainer = ({category, data}) => {
     )
   });
 
-  const secondCards = secondAnswerResults.map(result => {
+  const secondCards = secondAnswerResults.map((result, index) => {
     return (
-        <div key={result.id}>
+        <div key={index}>
           <Cards 
           {...result}
           key={result.id}
@@ -32,9 +32,9 @@ export const CardContainer = ({category, data}) => {
       );
   });
 
-  const thirdCards = thirdAnswerResults.map(result => {
+  const thirdCards = thirdAnswerResults.map((result, index) => {
     return (
-        <div key={result.id}>
+        <div key={index}>
           <Cards 
           {...result}
           key={result.id}
@@ -65,5 +65,5 @@ export default CardContainer;
 
 CardContainer.propTypes = {
   data:PropTypes.array.isRequired,
-  category: PropTypes.string.isRequired  
+  // category: PropTypes.string.isRequired  
 };

@@ -36,7 +36,7 @@ export const mapDispatchToProps = dispatch => ({
 export default connect(null, mapDispatchToProps)(Nav);
 
 
-// Nav.propTypes = {
-//   clearResponses:PropTypes.func,
-//   clearResults:PropTypes.func
-// };
+Nav.propTypes = {
+  clearResponses:PropTypes.func,
+  clearResults:PropTypes.func
+};
