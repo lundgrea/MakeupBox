@@ -4,6 +4,13 @@
   font-size: 40px;
 }
 
-.loading {
+.loading-sentence {
   text-align: center;
+}
+.loading-div {
+  text-align: center;
+}
+
+.loading-animation {
+  height: 800%;
 }

@@ -42,7 +42,8 @@ export class ResultsPage extends Component {
     return (
       <section className="results-page">
         <h3 className="results-page-headline">Your Results</h3>
-        {this.state.isLoading && <p className="loading">Gathering Your Selects</p>}
+        {this.state.isLoading && <p className="loading-sentence">Gathering Your Selects</p>}
+        {this.state.isLoading && <div className="loading-div"><img alt='loading' className='loading-animation' src="https://image21.net/103/loading_gif_png/loading_gif_png_59.gif"></img></div>}
         {!this.state.isLoading && <CardContainer category={this.props.responses} data={this.props.results}/>}
     </section>
     )
@@ -62,3 +63,5 @@ export const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ResultsPage)
+
+
