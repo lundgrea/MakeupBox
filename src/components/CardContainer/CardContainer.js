@@ -18,7 +18,7 @@ export const CardContainer = ({category, data}) => {
           key={result.id}
           />
         </div>
-      );
+    )
   });
 
   const secondCards = secondAnswerResults.map(result => {
@@ -64,6 +64,6 @@ export const CardContainer = ({category, data}) => {
 export default CardContainer;
 
 CardContainer.propTypes = {
-  data:PropTypes.array.isRequired ,
+  data:PropTypes.array.isRequired,
   category: PropTypes.array.isRequired  
 };

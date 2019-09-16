@@ -28,6 +28,9 @@ exports[`CardContainer should match the snapshot with all data passed in correct
     <div>
       <Cards />
     </div>
+    <div>
+      <Cards />
+    </div>
   </section>
   <section
     className="results-category-box"
@@ -53,6 +56,9 @@ exports[`CardContainer should match the snapshot with all data passed in correct
     <div>
       <Cards />
     </div>
+    <div>
+      <Cards />
+    </div>
   </section>
   <section
     className="results-category-box"
@@ -63,6 +69,9 @@ exports[`CardContainer should match the snapshot with all data passed in correct
     >
       p
     </h2>
+    <div>
+      <Cards />
+    </div>
     <div>
       <Cards />
     </div>
