@@ -9,7 +9,15 @@ describe('ResultsPage', () => {
     const wrapper = shallow(<ResultsPage />);
     expect(wrapper).toMatchSnapshot();
   }); 
+
+  // it('should update state when the page finishes loading', () => {
+  //   const wrapper = shallow(<ResultsPage />);
+  //   expect(wrapper.state('isLoading')).toEqual(true);
+  //   wrapper.instance().componentDidMount()
+  //   expect(wrapper.state('isLoading')).toEqual(false)
+  // });
 });
+
 
 describe('mapStateToProps', () => {
   it('should return the quiz responses list ', () => {
@@ -83,3 +91,8 @@ describe('mapDispatchToProps', () => {
     expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
   });
 })
+
+
+
+
+
