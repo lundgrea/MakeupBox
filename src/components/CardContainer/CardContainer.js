@@ -6,9 +6,9 @@ import PropTypes from 'prop-types';
 
 export const CardContainer = ({category, data}) => {
 
-  const firstAnswerResults = data[0].slice(0,5);
-  const secondAnswerResults = data[1].slice(0,5);
-  const thirdAnswerResults = data[2].slice(0,5);
+  const firstAnswerResults = data[0].slice(0,7);
+  const secondAnswerResults = data[1].slice(0,7);
+  const thirdAnswerResults = data[2].slice(0,7);
  
   const firstCards = firstAnswerResults.map(result => {
     return (
