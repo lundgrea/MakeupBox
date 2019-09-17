@@ -3,7 +3,7 @@ import './CardContainer.css';
 import Cards from '../Cards/Cards';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { handleErrors } from '../../actions'
+import { handleErrors } from '../../actions';
 
 
 export const CardContainer = ({error, categories, data}) => {
@@ -21,9 +21,9 @@ export const CardContainer = ({error, categories, data}) => {
               />
           </div>
         )
-      })
-    }
-  }
+      });
+    };
+  };
     
   return (
     <>
@@ -47,7 +47,7 @@ export const CardContainer = ({error, categories, data}) => {
 
 export const mapStateToProps = store => ({
   error: store.hasErrored
-})
+});
 
 export const mapDispatchToProps = dispatch => ({
   handleErrors: error => dispatch(handleErrors(error))

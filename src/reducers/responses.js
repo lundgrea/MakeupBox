@@ -8,5 +8,5 @@ export const responseReducer = (state=[], action) => {
       return state = []
     default:
       return state
-  }
-}
+  };
+};

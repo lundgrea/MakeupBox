@@ -22,12 +22,12 @@ describe('Quiz', () => {
 
 describe('mapDispatchToProps', () => {
   it('should call dispatch with setResponses action', () => {
-    const mockResponse = ['lips']
+    const mockResponse = ['lips'];
     const mockDispatch = jest.fn();
-    const actionToDispatch = setResponses(mockResponse)
-    const mappedProps = mapDispatchToProps(mockDispatch)
-    mappedProps.setResponses(mockResponse)
-    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
-  })
-})
+    const actionToDispatch = setResponses(mockResponse);
+    const mappedProps = mapDispatchToProps(mockDispatch);
+    mappedProps.setResponses(mockResponse);
+    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+  });
+});
 

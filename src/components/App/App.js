@@ -14,7 +14,7 @@ export const App = () => {
       <Route path='/quiz' component={Quiz} />
       <Route path='/results' component={ResultsPage} />
     </main>
-  )
+  );
 };
 
 export default App;

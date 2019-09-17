@@ -20,7 +20,7 @@ export const QuizQuestion = ({answers, question, id, name, handleChange}) => {
       </div>
     );
     });
-    return answersList
+    return answersList;
   };
 
   return (

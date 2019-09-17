@@ -6,5 +6,5 @@ export const resultsReducer = (state=[], action) => {
       return state = []
     default:
       return state
-  }
-}
+  };
+};

@@ -4,5 +4,5 @@ export const errorsReducer = (state = '', action) => {
       return action.error;
     default:
       return state;
-  }
-}
+  };
+};

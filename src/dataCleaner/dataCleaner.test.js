@@ -1,4 +1,4 @@
-import { cleanedSearchResults, cleanedSearch } from "./dataCleaner";
+import { cleanedSearchResults, cleanedSearch } from './dataCleaner';
 
 describe('cleanedSearchResults', () => {
   it('should clean the search results, post-fetch', () => {
@@ -37,31 +37,31 @@ describe('cleanedSearchResults', () => {
       'type': "lipstick"
     }]
     expect(cleanedSearchResults(mockDirtyData)).toEqual(mockCleanData);
-  })
-})
+  });
+});
 
 describe('cleanedSearch', () => {
   it('should convert the data into fetchable information', () => {
-    const mockDirtyData = ['lips', 'bold', 'vegan']
-    const mockCleanData = ['products.json?product_type=lipstick', 'products.json?product_type=eyeshadow', 'products.json?product_tags=Vegan']
+    const mockDirtyData = ['lips', 'bold', 'vegan'];
+    const mockCleanData = ['products.json?product_type=lipstick', 'products.json?product_type=eyeshadow', 'products.json?product_tags=Vegan'];
    expect(cleanedSearch(mockDirtyData)).toEqual(mockCleanData);
-  })
+  });
 
   it('should convert the data into fetchable information', () => {
-    const mockDirtyData = ['smokey', 'cruelty free', 'organic']
-    const mockCleanData = ['products.json?product_type=eyeshadow', 'products.json?product_tags=cruelty+free', 'products.json?product_tags=Organic']
+    const mockDirtyData = ['smokey', 'cruelty free', 'organic'];
+    const mockCleanData = ['products.json?product_type=eyeshadow', 'products.json?product_tags=cruelty+free', 'products.json?product_tags=Organic'];
    expect(cleanedSearch(mockDirtyData)).toEqual(mockCleanData);
-  })
+  });
 
   it('should convert the data into fetchable information', () => {
-    const mockDirtyData = ['nails', 'bronzed', 'natural']
-    const mockCleanData = ['products.json?product_type=nail_polish', 'products.json?product_type=bronzer', 'products.json?product_type=eyebrow']
+    const mockDirtyData = ['nails', 'bronzed', 'natural'];
+    const mockCleanData = ['products.json?product_type=nail_polish', 'products.json?product_type=bronzer', 'products.json?product_type=eyebrow'];
    expect(cleanedSearch(mockDirtyData)).toEqual(mockCleanData);
-  })
+  });
 
   it('should convert the data into fetchable information', () => {
-    const mockDirtyData = ['eyes', 'face/body', 'non-gmo']
-    const mockCleanData = ['products.json?product_type=eyeliner', 'products.json?product_type=foundation', 'products.json?product_tags=Non-GMO']
+    const mockDirtyData = ['eyes', 'face/body', 'non-gmo'];
+    const mockCleanData = ['products.json?product_type=eyeliner', 'products.json?product_type=foundation', 'products.json?product_tags=Non-GMO'];
    expect(cleanedSearch(mockDirtyData)).toEqual(mockCleanData);
-  })
-})
+  });
+});

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './ResultsPage.css';
-import { cleanedSearch, cleanedSearchResults } from '../../dataCleaner/dataCleaner'
+import { cleanedSearch, cleanedSearchResults } from '../../dataCleaner/dataCleaner';
 import { connect } from 'react-redux';
 import { getResults, isLoading, handleErrors, saveDefaultResponses } from "../../actions";
 import { fetchMakeup } from '../../apiCalls/apiCalls';
@@ -38,7 +38,7 @@ export class ResultsPage extends Component {
         {this.props.loading && <div className="loading-div"><img alt='loading' className='loading-animation' src="https://image21.net/103/loading_gif_png/loading_gif_png_59.gif"></img></div>}
         {!this.props.loading && !this.props.errors && <CardContainer categories={this.props.responses} data={this.props.results}/>}
     </section>
-    )
+    );
   };
 };
 

@@ -23,9 +23,9 @@ describe('QuizQuestion', () => {
       key={1}
       name='interests'
       handleChange={handleChangeMock}
-     />)  
+     />);
 
-     wrapper.find('input').at(0).simulate('change', mockEvent)
-     expect(handleChangeMock).toHaveBeenCalledWith(mockEvent)
-  })
+     wrapper.find('input').at(0).simulate('change', mockEvent);
+     expect(handleChangeMock).toHaveBeenCalledWith(mockEvent);
+  });
 }); 
