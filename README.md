@@ -48,5 +48,5 @@ npm test
 
 ## Screenshots
 ![](src/Images/WelcomePage.png)
-![](src/Images/Quiz.png)
-![](src/Images/Results.png)
+![](src/Images/Quiz2.png)
+![](src/Images/Results2.png)
