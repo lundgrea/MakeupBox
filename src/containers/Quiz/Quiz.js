@@ -11,8 +11,7 @@ export class Quiz extends Component {
   constructor() {
     super()
     this.state = {
-      userAnswers: [],     
-      results: []
+      userAnswers: []
     };
   };
 

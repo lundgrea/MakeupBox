@@ -7,7 +7,6 @@ import { connect } from 'react-redux';
 
 export const CardContainer = ({error, category, data}) => {
 
-
   const firstAnswerResults = data[0].slice(0,7);
   const secondAnswerResults = data[1].slice(0,7);
   const thirdAnswerResults = data[2].slice(0,7);
@@ -47,7 +46,7 @@ export const CardContainer = ({error, category, data}) => {
     
   return (
     <>
-    {error && <p>PLEASE COMPLETE QUIZ</p>}
+    {error && <p>{error}</p>}
     <article className='card-container'>
       <section key='0' className='results-category-box'>
         <h2 className='results-category-headline'>{category[0]}</h2>
