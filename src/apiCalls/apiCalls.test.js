@@ -17,11 +17,11 @@ describe('fetchMakeup', () => {
           'price': "5.5",
           'price_sign': "$",
           'product_api_url': "http://makeup-api.herokuapp.com/api/v1/products/1047.json",
-          'product_colors': (7) [{}, {}, {}, {}, {}, {}, {}],
+          'product_colors': (7)[{}, {}, {}, {}, {}, {}, {}],
           'product_link': "https://colourpop.com/collections/lippie-stix?filter=blotted-lip",
           'product_type': "lipstick",
           'rating': null,
-          'tag_list': (2) ["Vegan", "cruelty free"],
+          'tag_list': (2)["Vegan", "cruelty free"],
           'updated_at': "2018-07-09T00:53:23.287Z",
           'website_link': "https://colourpop.com",
       }
