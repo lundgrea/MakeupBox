@@ -2,9 +2,9 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { ResultsPage, mapStateToProps, mapDispatchToProps } from './ResultsPage';
 import { handleErrors, isLoading, getResults } from '../../actions'
-import { fetchMakeup } from '../../apiCalls/apiCalls'
+// import { fetchMakeup } from '../../apiCalls/apiCalls'
 
-jest.mock('../../apiCalls/apiCalls');
+// jest.mock('../../apiCalls/apiCalls');
 
 describe('ResultsPage', () => {
   it('should match the snapshot', () => {

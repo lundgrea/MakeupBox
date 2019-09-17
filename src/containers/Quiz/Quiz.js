@@ -23,6 +23,14 @@ export class Quiz extends Component {
     });
   };
 
+  determineEnabled = () => {
+    if(this.state.userAnswers.length < 4) {
+      return true
+    } else {
+      return false
+    }
+  }
+
   handleChange = (e) => {
     this.setState({userAnswers: [...this.state.userAnswers, e.target.value]});
     this.props.setResponses(e.target.value);
@@ -33,7 +41,7 @@ export class Quiz extends Component {
       <fieldset className='quiz-container'>
         <h2 className='quiz-headline'>Help Us Tailor Your Results To Suit Your Needs</h2>
         {this.generateQuiz()}
-        <Link to='/results'><button className="button-quiz-submit">submit answers</button></Link>
+        <Link to='/results'><button disabled={this.determineEnabled()} className="button-quiz-submit">submit answers</button></Link>
       </fieldset>
     );
   };
