@@ -6,7 +6,7 @@ import { clearResults, clearResponses } from '../../actions';
 import PropTypes from 'prop-types';
 
 
-export const Nav = (props) => {
+export const Nav = props => {
 
 const emptyFields = () => {
   props.clearResults();
@@ -37,6 +37,6 @@ export default connect(null, mapDispatchToProps)(Nav);
 
 
 Nav.propTypes = {
-  clearResponses:PropTypes.func.isRequired,
-  clearResults:PropTypes.func.isRequired,
+  clearResponses:PropTypes.func,
+  clearResults:PropTypes.func
 };

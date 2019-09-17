@@ -1,92 +1,130 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CardContainer should match the snapshot with all data passed in correctly 1`] = `
-<article
-  className="card-container"
->
-  <section
-    className="results-category-box"
-    key="0"
+<Fragment>
+  <article
+    className="card-container"
   >
-    <h2
-      className="results-category-headline"
+    <section
+      className="results-category-box"
+      key="0"
     >
-      l
-    </h2>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-  </section>
-  <section
-    className="results-category-box"
-    key="1"
-  >
-    <h2
-      className="results-category-headline"
+      <h2
+        className="results-category-headline"
+      >
+        l
+      </h2>
+      <div
+        key="0"
+      >
+        <Cards />
+      </div>
+      <div
+        key="1"
+      >
+        <Cards />
+      </div>
+      <div
+        key="2"
+      >
+        <Cards />
+      </div>
+      <div
+        key="3"
+      >
+        <Cards />
+      </div>
+      <div
+        key="4"
+      >
+        <Cards />
+      </div>
+      <div
+        key="5"
+      >
+        <Cards />
+      </div>
+    </section>
+    <section
+      className="results-category-box"
+      key="1"
     >
-      i
-    </h2>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-  </section>
-  <section
-    className="results-category-box"
-    key="2"
-  >
-    <h2
-      className="results-category-headline"
+      <h2
+        className="results-category-headline"
+      >
+        i
+      </h2>
+      <div
+        key="0"
+      >
+        <Cards />
+      </div>
+      <div
+        key="1"
+      >
+        <Cards />
+      </div>
+      <div
+        key="2"
+      >
+        <Cards />
+      </div>
+      <div
+        key="3"
+      >
+        <Cards />
+      </div>
+      <div
+        key="4"
+      >
+        <Cards />
+      </div>
+      <div
+        key="5"
+      >
+        <Cards />
+      </div>
+    </section>
+    <section
+      className="results-category-box"
+      key="2"
     >
-      p
-    </h2>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Cards />
-    </div>
-  </section>
-</article>
+      <h2
+        className="results-category-headline"
+      >
+        p
+      </h2>
+      <div
+        key="0"
+      >
+        <Cards />
+      </div>
+      <div
+        key="1"
+      >
+        <Cards />
+      </div>
+      <div
+        key="2"
+      >
+        <Cards />
+      </div>
+      <div
+        key="3"
+      >
+        <Cards />
+      </div>
+      <div
+        key="4"
+      >
+        <Cards />
+      </div>
+      <div
+        key="5"
+      >
+        <Cards />
+      </div>
+    </section>
+  </article>
+</Fragment>
 `;

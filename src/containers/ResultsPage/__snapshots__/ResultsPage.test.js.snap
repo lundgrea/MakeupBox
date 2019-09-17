@@ -9,19 +9,6 @@ exports[`ResultsPage should match the snapshot 1`] = `
   >
     Your Results
   </h3>
-  <p
-    className="loading-sentence"
-  >
-    Gathering Your Selects
-  </p>
-  <div
-    className="loading-div"
-  >
-    <img
-      alt="loading"
-      className="loading-animation"
-      src="https://image21.net/103/loading_gif_png/loading_gif_png_59.gif"
-    />
-  </div>
+  <CardContainer />
 </section>
 `;
