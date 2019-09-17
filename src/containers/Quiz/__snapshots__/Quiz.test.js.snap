@@ -74,6 +74,7 @@ exports[`Quiz should match the snapshot 1`] = `
   >
     <button
       className="button-quiz-submit"
+      disabled={true}
     >
       submit answers
     </button>
