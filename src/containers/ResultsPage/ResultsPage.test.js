@@ -4,7 +4,7 @@ import { ResultsPage, mapStateToProps, mapDispatchToProps } from './ResultsPage'
 import { handleErrors, isLoading, getResults } from '../../actions'
 import { fetchMakeup } from '../../apiCalls/apiCalls'
 
-jest.mock('../../apiCalls/apiCalls')
+jest.mock('../../apiCalls/apiCalls');
 
 describe('ResultsPage', () => {
   it('should match the snapshot', () => {
@@ -70,7 +70,7 @@ describe('mapStateToProps', () => {
     const mappedProps = mapStateToProps(mockState);
     expect(mappedProps).toEqual(expected);
   });
-})
+});
 
 describe('mapDispatchToProps', () => {
   it('should call dispatch with an isLoading action', () => {
@@ -96,7 +96,7 @@ describe('mapDispatchToProps', () => {
     mappedProps.getResults([[{makeup1: '1'}, {makeup2: '2'}], [{makeup3: '3'}, {makeup4: '4'}], [{makeup5: '5'},{makeup6: '6'}] ]);
     expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
   });
-})
+});
 
 
 

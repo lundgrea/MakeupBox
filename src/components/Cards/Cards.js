@@ -2,7 +2,8 @@ import React from 'react';
 import './Cards.css';
 import PropTypes from 'prop-types';
 
-export const Cards = ({img, brand, name, description, price, tags, color}) => {
+export const Cards = ({img, brand, name, description, price, tags}) => {
+
   return (
     <article className='card'>
       <img className='card-img' alt='product' src={img}></img>
@@ -11,10 +12,9 @@ export const Cards = ({img, brand, name, description, price, tags, color}) => {
       <p className='card-description'>{description}</p>
       <h6 className='card-price'>${price}</h6>
       <p className='card-tags'>{tags}</p>
-      {/* <p>{color}</p> */}
     </article>
   )
-}
+};
 
 export default Cards;
 

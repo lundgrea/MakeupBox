@@ -1,4 +1,4 @@
-import { fetchMakeup } from "./apiCalls";
+import { fetchMakeup } from './apiCalls';
 
 describe('fetchMakeup', () => {
   let mockResponse;
@@ -30,33 +30,33 @@ describe('fetchMakeup', () => {
       return Promise.resolve({
         ok: true,
         json: () => Promise.resolve(mockResponse)
-      })
-    })
+      });
+    });
   })
 
   it('should call fetch with the correct url', () => {
     fetchMakeup('products.json?product_type=bronzer');
     expect(window.fetch).toHaveBeenCalledWith('http://makeup-api.herokuapp.com/api/v1/products.json?product_type=bronzer')
-  })
+  });
 
 
   it('should return a successful response (HAPPY)', () => {
-    expect(fetchMakeup('products.json?product_type=bronzer')).resolves.toEqual(mockResponse)
-  })
+    expect(fetchMakeup('products.json?product_type=bronzer')).resolves.toEqual(mockResponse);
+  });
 
   it('should return an error (SAD)', () => {
     window.fetch = jest.fn().mockImplementation(() => {
       return Promise.resolve({
         ok: false
-      })
-    })
-    expect(fetchMakeup('products.json?product_type=bronzer')).rejects.toEqual(Error('There was an error retreiving your makeup suggestions'))
-  })
+      });
+    });
+    expect(fetchMakeup('products.json?product_type=bronzer')).rejects.toEqual(Error('There was an error retreiving your makeup suggestions'));
+  });
 
   it('should return an error if the promise rejects (SAD)', () => {
     window.fetch = jest.fn().mockImplementation(() => {
-      return Promise.reject(Error('Failed to get makeup'))
-    })
-    expect(fetchMakeup('products.json?product_type=bronzer')).rejects.toEqual(Error('Failed to get makeup'))
-  })
-})
+      return Promise.reject(Error('Failed to get makeup'));
+    });
+    expect(fetchMakeup('products.json?product_type=bronzer')).rejects.toEqual(Error('Failed to get makeup'));
+  });
+});

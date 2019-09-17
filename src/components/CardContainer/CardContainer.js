@@ -3,62 +3,42 @@ import './CardContainer.css';
 import Cards from '../Cards/Cards';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { handleErrors } from '../../actions';
 
 
-export const CardContainer = ({error, category, data}) => {
+export const CardContainer = ({error, categories, data}) => {
 
-  const firstAnswerResults = data[0].slice(0,7);
-  const secondAnswerResults = data[1].slice(0,7);
-  const thirdAnswerResults = data[2].slice(0,7);
- 
-  const firstCards = firstAnswerResults.map((result, index) => {
-    return (
-        <div key={index}>
-          <Cards 
-          {...result}
-          key={result.id}
-          />
-        </div>
-    )
-  });
-
-  const secondCards = secondAnswerResults.map((result, index) => {
-    return (
-        <div key={index}>
-          <Cards 
-          {...result}
-          key={result.id}
-          />
-        </div>
-      );
-  });
-
-  const thirdCards = thirdAnswerResults.map((result, index) => {
-    return (
-        <div key={index}>
-          <Cards 
-          {...result}
-          key={result.id}
-          />
-        </div>
-      );
-  });
+  const buildCardDeck = (data) => {
+    if (!data) {
+      return error
+    } else {
+      return data.map((cardInfo, index)=> {
+        return (
+          <div key={index}>
+            <Cards 
+            {...cardInfo}
+            key={cardInfo.id}
+              />
+          </div>
+        )
+      });
+    };
+  };
     
   return (
     <>
-    {error && <p>{error}</p>}
     <article className='card-container'>
       <section key='0' className='results-category-box'>
-        <h2 className='results-category-headline'>{category[0]}</h2>
-        {firstCards}
+        <h2 className='results-category-headline'>{categories[0]}</h2>
+        {buildCardDeck(data[0])}
       </section>
       <section key='1' className='results-category-box'>
-        <h2 className='results-category-headline'>{category[1]}</h2>
-        {secondCards}
+        <h2 className='results-category-headline'>{categories[1]}</h2>
+        {buildCardDeck(data[1])}
       </section>
       <section key='2' className='results-category-box'>
-        <h2 className='results-category-headline'>{category[2]}</h2>
-        {thirdCards}
+        <h2 className='results-category-headline'>{categories[2]}</h2>
+        {buildCardDeck(data[2])}
       </section>
     </article>
     </>
@@ -67,11 +47,15 @@ export const CardContainer = ({error, category, data}) => {
 
 export const mapStateToProps = store => ({
   error: store.hasErrored
-})
+});
 
-export default connect(mapStateToProps)(CardContainer);
+export const mapDispatchToProps = dispatch => ({
+  handleErrors: error => dispatch(handleErrors(error))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(CardContainer);
 
 CardContainer.propTypes = {
-  data:PropTypes.array.isRequired,
-  // category: PropTypes.string.isRequired  
+  data:PropTypes.array,
+  categories: PropTypes.array 
 };

@@ -1,7 +1,7 @@
-import { errorsReducer } from "./errors";
-import { loadingReducer } from "./loading";
-import { responseReducer } from "./responses";
-import { resultsReducer } from "./results";
+import { errorsReducer } from './errors';
+import { loadingReducer } from './loading';
+import { responseReducer } from './responses';
+import { resultsReducer } from './results';
 
 
 describe('errorsReducer', () => {
@@ -18,7 +18,7 @@ describe('errorsReducer', () => {
       type: 'SET_RESPONSES',
       bool: 'lips'
     };
-    expect(errorsReducer(undefined, mockAction)).toEqual('')
+    expect(errorsReducer(undefined, mockAction)).toEqual('');
   });
 });
 
@@ -28,7 +28,7 @@ describe('loadingReducer', () => {
       type: 'IS_LOADING',
       bool: true
     };
-    expect(loadingReducer(undefined, mockAction)).toEqual(true)
+    expect(loadingReducer(undefined, mockAction)).toEqual(true);
   });
 
   it('should put not change the store if IS_LOADING is not met', () => {
@@ -36,7 +36,7 @@ describe('loadingReducer', () => {
       type: 'SET_RESPONSES',
       bool: 'lips'
     };
-    expect(loadingReducer(undefined, mockAction)).toEqual(true)
+    expect(loadingReducer(undefined, mockAction)).toEqual(true);
   });
 });
 
@@ -46,7 +46,7 @@ describe('responseReducer', () => {
       type: 'IS_LOADING',
       bool: true
     };
-    expect(responseReducer(undefined, mockAction)).toEqual([])
+    expect(responseReducer(undefined, mockAction)).toEqual([]);
   });
 
   it('should put the responses from the quiz in the store if SET_RESPONSES is met', () => {
@@ -54,7 +54,7 @@ describe('responseReducer', () => {
       type: 'SET_RESPONSES',
       response: 'lips'
     };
-    expect(responseReducer(undefined, mockAction)).toEqual(['lips'])
+    expect(responseReducer(undefined, mockAction)).toEqual(['lips']);
   });
 
   it('should add the responses from the quiz to the store if SET_RESPONSES is met', () => {
@@ -62,16 +62,16 @@ describe('responseReducer', () => {
       type: 'SET_RESPONSES',
       response: 'lips'
     };
-    expect(responseReducer(['lashes'], mockAction)).toEqual(['lashes', 'lips'])
+    expect(responseReducer(['lashes'], mockAction)).toEqual(['lashes', 'lips']);
   });
 
 
   it('should clear the store if CLEAR_RESPONSES is met',() => {
     let mockAction = {
       type: 'CLEAR_RESPONSES'
-    }
-    expect(responseReducer(undefined, mockAction)).toEqual([])
-  })
+    };
+    expect(responseReducer(undefined, mockAction)).toEqual([]);
+  });
 });
 
 describe('resultsReducer', () => {
@@ -80,30 +80,30 @@ describe('resultsReducer', () => {
       type: 'GET_RESULTS',
       results: [{'eyeshadow1': 'wet n wild'}, {'eyeshadow2': 'almay'}]
     };
-    expect(resultsReducer(undefined, mockAction)).toEqual([[{'eyeshadow1': 'wet n wild'}, {'eyeshadow2': 'almay'}]])
-  })
+    expect(resultsReducer(undefined, mockAction)).toEqual([[{'eyeshadow1': 'wet n wild'}, {'eyeshadow2': 'almay'}]]);
+  });
 
   it('should add results from the fetch in the store if GET_RESULTS is met', () => {
-    let mockState = [[{'eyeshadow1': 'wet n wild'}, {'eyeshadow2': 'almay'}]]
+    let mockState = [[{'eyeshadow1': 'wet n wild'}, {'eyeshadow2': 'almay'}]];
     let mockAction = {
       type: 'GET_RESULTS',
       results: [{'mascara1': 'maybelline'}, {'mascara2': 'mac'}]
     };
-    expect(resultsReducer(mockState, mockAction)).toEqual([[{'eyeshadow1': 'wet n wild'}, {'eyeshadow2': 'almay'}], [{'mascara1': 'maybelline'}, {'mascara2': 'mac'}]])
-  })
+    expect(resultsReducer(mockState, mockAction)).toEqual([[{'eyeshadow1': 'wet n wild'}, {'eyeshadow2': 'almay'}], [{'mascara1': 'maybelline'}, {'mascara2': 'mac'}]]);
+  });
 
   it('should not change the store if GET_RESULTS is not met', () => {
     let mockAction = {
       type: 'SET_RESPONSES',
       bool: 'lips'
     };
-    expect(resultsReducer(undefined, mockAction)).toEqual([])
+    expect(resultsReducer(undefined, mockAction)).toEqual([]);
   });
 
   it('should clear the store if CLEAR_RESULTS is met',() => {
     let mockAction = {
       type: 'CLEAR_RESULTS'
-    }
-    expect(resultsReducer(undefined, mockAction)).toEqual([])
-  })
+    };
+    expect(resultsReducer(undefined, mockAction)).toEqual([]);
+  });
 });
