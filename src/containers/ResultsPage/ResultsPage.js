@@ -2,15 +2,29 @@ import React, { Component } from 'react';
 import './ResultsPage.css';
 import { cleanedSearch, cleanedSearchResults } from '../../dataCleaner/dataCleaner'
 import { connect } from 'react-redux';
-import { getResults, isLoading, handleErrors } from "../../actions";
+import { getResults, isLoading, handleErrors, saveDefaultResponses } from "../../actions";
 import { fetchMakeup } from '../../apiCalls/apiCalls';
 import { CardContainer } from '../../components/CardContainer/CardContainer'
 
 
 export class ResultsPage extends Component {
  
+  determineSearch = () => { 
+    const defaultSearch = ['lips', 'bold', 'vegan']
+    if (this.props.responses.length < 3) {
+      this.props.saveDefaultResponses(defaultSearch)
+      return this.props.responses
+    } else {
+      return this.props.responses
+    }
+  }
+
+
+
+
+
   async componentDidMount () {
-    const searches = cleanedSearch(this.props.responses)
+    const searches = cleanedSearch(this.determineSearch())
     try {
       this.props.isLoading(true)
       const firstResult = await fetchMakeup(searches[0])
@@ -29,6 +43,7 @@ export class ResultsPage extends Component {
     }
   }
 
+
   render() {
     return (
       <section className="results-page">
@@ -36,7 +51,7 @@ export class ResultsPage extends Component {
         {this.props.loading && <p className="loading-sentence">Gathering Your Selects</p>}
         {this.props.errors && <p className="loading-sentence">{this.props.errors}</p>}
         {this.props.loading && <div className="loading-div"><img alt='loading' className='loading-animation' src="https://image21.net/103/loading_gif_png/loading_gif_png_59.gif"></img></div>}
-        {!this.props.loading && <CardContainer category={this.props.responses} data={this.props.results}/>}
+        {!this.props.loading && <CardContainer categories={this.props.responses} data={this.props.results}/>}
     </section>
     )
   }
@@ -52,7 +67,8 @@ export const mapStateToProps = store => ({
 export const mapDispatchToProps = dispatch => ({
   isLoading: bool => dispatch(isLoading(bool)),
   handleErrors: error => dispatch(handleErrors(error)),
-  getResults: results => dispatch(getResults(results))
+  getResults: results => dispatch(getResults(results)),
+  saveDefaultResponses: responses => dispatch(saveDefaultResponses(responses))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ResultsPage)

@@ -27,3 +27,8 @@ export const clearResponses = response => ({
   type: 'CLEAR_RESPONSES',
   response
 })
+
+export const saveDefaultResponses = responses => ({
+  type: 'SAVE_DEFAULTS',
+  responses
+})
