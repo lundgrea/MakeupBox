@@ -1,6 +1,6 @@
 # TAKEUP
 
-TAKEUP is an introductory makeup tool designed for men interested in exploring the wide world of cosmetics. The application allows visitors to provide their specific curiosities and then serves up product data related to these interests. Reducing the noise TAKEUP displays a limited number of search results within an easy to navigate guided user interface.
+TAKEUP is an introductory makeup tool designed for men interested in exploring the wide world of cosmetics. The application allows visitors to provide their specific curiosities and then serves up product data related to these interests. Reducing the noise TAKEUP displays the search results within an easy to navigate guided user interface.
 
 Planned, designed, built and tested as an individual project over the course of five days TAKEUP utilizes React to handle user interactions and Redux to store and direct application data. User flow managed with React Router guides the visitor on a private tour through their custom cosmetic experience. Asynchronous JavaScript fetch calls have been implemented with loading and error handling to ensure an engaged user experience throughout active network requests. An Enzyme/Jest testing suite accompanies the program.
 
