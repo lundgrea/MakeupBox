@@ -29,16 +29,8 @@ export const CardContainer = ({error, categories, data}) => {
     <>
     <article className='card-container'>
       <section key='0' className='results-category-box'>
-        <h2 className='results-category-headline'>{categories[0]}</h2>
-        {buildCardDeck(data[0])}
-      </section>
-      <section key='1' className='results-category-box'>
-        <h2 className='results-category-headline'>{categories[1]}</h2>
-        {buildCardDeck(data[1])}
-      </section>
-      <section key='2' className='results-category-box'>
-        <h2 className='results-category-headline'>{categories[2]}</h2>
-        {buildCardDeck(data[2])}
+        <h2 className='results-category-headline'>{categories}</h2>
+        {buildCardDeck(data)}
       </section>
     </article>
     </>
