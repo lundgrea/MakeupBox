@@ -32,14 +32,6 @@ export const CardContainer = ({error, categories, data}) => {
         <h2 className='results-category-headline'>{categories}</h2>
         {buildCardDeck(data)}
       </section>
-      {/* <section key='1' className='results-category-box'>
-        <h2 className='results-category-headline'>{categories[1]}</h2>
-        {buildCardDeck(data[1])}
-      </section>
-      <section key='2' className='results-category-box'>
-        <h2 className='results-category-headline'>{categories[2]}</h2>
-        {buildCardDeck(data[2])} */}
-      {/* </section> */}
     </article>
     </>
   );

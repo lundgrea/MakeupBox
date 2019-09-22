@@ -37,10 +37,6 @@ export class ResultsPage extends Component {
         {this.props.errors && <p className="loading-sentence">{this.props.errors}</p>}
         {this.props.loading && <div className="loading-div"><img alt='loading' className='loading-animation' src="https://image21.net/103/loading_gif_png/loading_gif_png_59.gif"></img></div>}
       <section className="results-page">
-        {/* <p className="loading-sentence">Gathering Your Selects</p> */}
-
-        {/* <div className="loading-div"><img alt='loading' className='loading-animation' src="https://image21.net/103/loading_gif_png/loading_gif_png_59.gif"></img></div> */}
-
         {!this.props.loading && !this.props.errors && <CardContainer categories={this.props.responses[0]} data={this.props.results[0]}/>}
         {!this.props.loading && !this.props.errors && <CardContainer categories={this.props.responses[1]} data={this.props.results[1]}/>}
         {!this.props.loading && !this.props.errors && <CardContainer categories={this.props.responses[2]} data={this.props.results[2]}/>}
