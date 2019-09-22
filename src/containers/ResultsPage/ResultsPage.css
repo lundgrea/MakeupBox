@@ -1,3 +1,12 @@
+.results-container {
+  text-align: center;
+  margin: auto
+}
+
+.results-page {
+  display: flex;
+  text-align: center;
+}
 
 .results-page-headline {
   text-align: center;
@@ -6,10 +15,11 @@
 
 .loading-sentence {
   text-align: center;
+  margin: auto;
 }
 
 .loading-div {
-  text-align: center;
+  margin: auto;
 }
 
 .loading-animation {
